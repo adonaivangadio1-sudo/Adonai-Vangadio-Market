@@ -1,0 +1,961 @@
+<!-- ======================================================
+     PAGES/PERFIL-COMPRADOR.HTML
+     AV MARKET — PERFIL DO COMPRADOR
+====================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="pt-AO">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perfil do Comprador | AV Market</title>
+
+
+<!-- CSS GLOBAL -->
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="../css/header.css">
+
+<link rel="stylesheet" href="../css/responsive.css">
+
+<link rel="stylesheet" href="../css/cards.css">
+
+
+<!-- CSS DO PERFIL -->
+
+<link rel="stylesheet" href="../css/perfil-comprador.css">
+
+
+<!-- FONT AWESOME -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+</head>
+
+
+<body class="buyer-profile-body">
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="buyer-profile-header">
+
+    <div class="buyer-header-container">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="../index.html"
+            class="buyer-profile-brand"
+        >
+
+            <span class="buyer-logo-av">
+                AV
+            </span>
+
+            <span class="buyer-logo-market">
+                Market
+            </span>
+
+        </a>
+
+
+
+        <!-- AÇÕES -->
+
+        <div class="buyer-header-actions">
+
+
+            <!-- NOTIFICAÇÕES -->
+
+            <button
+                type="button"
+                class="buyer-notification"
+                aria-label="Notificações"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+
+            <!-- CONTA -->
+
+            <div class="buyer-account-wrapper">
+
+
+                <button
+                    type="button"
+                    class="buyer-user-button"
+                    id="buyerAccountButton"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                >
+
+                    <div class="buyer-avatar">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+
+                    <span id="buyerHeaderName">
+                        Comprador
+                    </span>
+
+
+                    <i class="fa-solid fa-chevron-down account-chevron"></i>
+
+                </button>
+
+
+
+                <!-- ==================================================
+                     MENU DA CONTA
+                =================================================== -->
+
+                <div
+                    class="buyer-account-menu"
+                    id="buyerAccountMenu"
+                >
+
+
+                    <!-- CABEÇALHO DO MENU -->
+
+                    <div class="account-menu-header">
+
+                        <div class="account-menu-avatar">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong id="buyerMenuName">
+                                Comprador
+                            </strong>
+
+                            <span>
+                                Conta de comprador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="account-menu-divider"></div>
+
+
+
+                    <!-- VISÃO GERAL -->
+
+                    <a
+                        href="#inicio"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>
+                            Visão geral
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- PEDIDOS -->
+
+                    <a
+                        href="#pedidos"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-box"></i>
+
+                        <span>
+                            Meus pedidos
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- FAVORITOS -->
+
+                    <a
+                        href="#favoritos"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <span>
+                            Favoritos
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- CARRINHO -->
+
+                    <a
+                        href="#carrinho"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <span>
+                            Carrinho
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- AVALIAÇÕES -->
+
+                    <a
+                        href="#avaliacoes"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span>
+                            Avaliações
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- DEFINIÇÕES -->
+
+                    <a
+                        href="#definicoes"
+                        class="account-menu-item"
+                    >
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>
+                            Definições
+                        </span>
+
+                    </a>
+
+
+
+                    <div class="account-menu-divider"></div>
+
+
+
+                    <!-- SAIR -->
+
+                    <button
+                        type="button"
+                        class="account-menu-logout"
+                        id="buyerLogoutButton"
+                    >
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>
+                            Sair
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ======================================================
+     DASHBOARD
+====================================================== -->
+
+<div class="buyer-dashboard">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside class="buyer-sidebar">
+
+
+        <!-- IDENTIFICAÇÃO -->
+
+        <div class="buyer-sidebar-brand">
+
+            <div class="buyer-sidebar-logo">
+                AV
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Área do Comprador
+                </strong>
+
+                <span>
+                    AV Market
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <nav class="buyer-menu">
+
+
+            <a
+                href="#inicio"
+                class="active"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Visão geral
+                </span>
+
+            </a>
+
+
+
+            <a href="#pedidos">
+
+                <i class="fa-solid fa-box"></i>
+
+                <span>
+                    Meus pedidos
+                </span>
+
+            </a>
+
+
+
+            <a href="#favoritos">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <span>
+                    Favoritos
+                </span>
+
+            </a>
+
+
+
+            <a href="#carrinho">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>
+                    Carrinho
+                </span>
+
+            </a>
+
+
+
+            <a href="#avaliacoes">
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>
+                    Avaliações
+                </span>
+
+            </a>
+
+
+
+            <a href="#definicoes">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>
+                    Definições
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SAIR -->
+
+        <div class="buyer-sidebar-footer">
+
+            <button
+                type="button"
+                id="buyerSidebarLogout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Sair da conta
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         CONTEÚDO
+    =================================================== -->
+
+    <main
+        class="buyer-main"
+        id="inicio"
+    >
+
+
+        <!-- ==================================================
+             BOAS-VINDAS
+        =================================================== -->
+
+        <section class="buyer-welcome">
+
+            <div>
+
+                <span class="buyer-label">
+                    ÁREA DO COMPRADOR
+                </span>
+
+
+                <h1>
+                    Olá,
+                    <span id="buyerWelcomeName">
+                        Comprador
+                    </span>.
+                </h1>
+
+
+                <p>
+                    Consulte as suas compras,
+                    pedidos e produtos favoritos.
+                </p>
+
+            </div>
+
+
+
+            <a
+                href="../index.html"
+                class="buyer-shopping-button"
+            >
+
+                <i class="fa-solid fa-store"></i>
+
+                Continuar a comprar
+
+            </a>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ESTATÍSTICAS
+        =================================================== -->
+
+        <section class="buyer-stats">
+
+
+            <div class="buyer-stat-card">
+
+                <div class="buyer-stat-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Compras
+                    </span>
+
+                    <strong id="buyerPurchasesCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="buyer-stat-card">
+
+                <div class="buyer-stat-icon">
+
+                    <i class="fa-solid fa-box"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Pedidos
+                    </span>
+
+                    <strong id="buyerOrdersCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="buyer-stat-card">
+
+                <div class="buyer-stat-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Favoritos
+                    </span>
+
+                    <strong id="buyerFavoritesCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="buyer-stat-card">
+
+                <div class="buyer-stat-icon">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Saldo
+                    </span>
+
+                    <strong id="buyerBalance">
+                        0 Kz
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PEDIDOS
+        =================================================== -->
+
+        <section
+            class="buyer-panel"
+            id="pedidos"
+        >
+
+            <div class="buyer-panel-header">
+
+                <div>
+
+                    <span>
+                        HISTÓRICO
+                    </span>
+
+                    <h2>
+                        Meus pedidos
+                    </h2>
+
+                </div>
+
+                <a href="#pedidos">
+
+                    Ver todos
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div
+                class="buyer-empty"
+                id="buyerOrdersContainer"
+            >
+
+                <div class="buyer-empty-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+
+                <h3>
+                    Ainda não existem pedidos
+                </h3>
+
+
+                <p>
+                    Quando realizar uma compra,
+                    os seus pedidos aparecerão aqui.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             FAVORITOS
+        =================================================== -->
+
+        <section
+            class="buyer-panel"
+            id="favoritos"
+        >
+
+            <div class="buyer-panel-header">
+
+                <div>
+
+                    <span>
+                        PRODUTOS
+                    </span>
+
+                    <h2>
+                        Favoritos
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="buyer-empty"
+                id="buyerFavoritesContainer"
+            >
+
+                <div class="buyer-empty-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+
+                <h3>
+                    Nenhum favorito guardado
+                </h3>
+
+
+                <p>
+                    Guarde produtos interessantes
+                    para encontrar facilmente depois.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CARRINHO
+        =================================================== -->
+
+        <section
+            class="buyer-panel"
+            id="carrinho"
+        >
+
+            <div class="buyer-panel-header">
+
+                <div>
+
+                    <span>
+                        COMPRAS
+                    </span>
+
+                    <h2>
+                        Carrinho
+                    </h2>
+
+                </div>
+
+
+                <a href="../pages/carrinho.html">
+
+                    Abrir carrinho
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <div
+                class="buyer-empty"
+                id="buyerCartContainer"
+            >
+
+                <div class="buyer-empty-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+
+                <h3>
+                    O seu carrinho está vazio
+                </h3>
+
+
+                <p>
+                    Adicione produtos para começar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             AVALIAÇÕES
+        =================================================== -->
+
+        <section
+            class="buyer-panel"
+            id="avaliacoes"
+        >
+
+            <div class="buyer-panel-header">
+
+                <div>
+
+                    <span>
+                        EXPERIÊNCIA
+                    </span>
+
+                    <h2>
+                        Avaliações
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="buyer-empty">
+
+                <div class="buyer-empty-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+
+                <h3>
+                    Ainda não existem avaliações
+                </h3>
+
+
+                <p>
+                    As suas avaliações aparecerão aqui
+                    depois das suas compras.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DEFINIÇÕES
+        =================================================== -->
+
+        <section
+            class="buyer-panel"
+            id="definicoes"
+        >
+
+            <div class="buyer-panel-header">
+
+                <div>
+
+                    <span>
+                        CONTA
+                    </span>
+
+                    <h2>
+                        Definições
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="buyer-settings">
+
+
+                <!-- DADOS PESSOAIS -->
+
+                <a href="#">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <div>
+
+                        <strong>
+                            Dados pessoais
+                        </strong>
+
+                        <span>
+                            Editar informações
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- ENDEREÇOS -->
+
+                <a href="#">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+
+                        <strong>
+                            Endereços
+                        </strong>
+
+                        <span>
+                            Gerir moradas
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- SEGURANÇA -->
+
+                <a href="#">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <div>
+
+                        <strong>
+                            Segurança
+                        </strong>
+
+                        <span>
+                            Alterar palavra-passe
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/script.js"></script>
+
+<script src="../js/perfil-comprador.js"></script>
+
+
+</body>
+
+</html>
