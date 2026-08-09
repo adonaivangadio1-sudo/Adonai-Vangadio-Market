@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#080808">
+
+    <title>
+        Checkout | AV Market
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/checkout.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="checkout-header">
+
+    <div class="checkout-header-container">
+
+        <a
+            href="../index.html"
+            class="checkout-brand">
+
+            <span class="checkout-logo-av">
+                AV
+            </span>
+
+            <span class="checkout-logo-market">
+                Market
+            </span>
+
+        </a>
+
+        <div class="checkout-header-title">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <span>
+                Checkout seguro
+            </span>
+
+        </div>
+
+        <a
+            href="carrinho.html"
+            class="checkout-back">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>
+                Carrinho
+            </span>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="checkout-main">
+
+    <section class="checkout-page">
+
+        <div class="checkout-container">
+
+
+            <div class="checkout-heading">
+
+                <div>
+
+                    <span class="checkout-tag">
+                        AV MARKET
+                    </span>
+
+                    <h1>
+                        Finalizar compra
+                    </h1>
+
+                    <p>
+                        Confirme os seus dados e escolha o método
+                        de pagamento.
+                    </p>
+
+                </div>
+
+                <div class="checkout-security">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Compra protegida
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="checkoutAuthMessage"
+                class="checkout-message checkout-message-warning">
+
+                <i class="fa-solid fa-user-lock"></i>
+
+                <div>
+
+                    <strong>
+                        Sessão necessária
+                    </strong>
+
+                    <span>
+                        Entre na sua conta para continuar.
+                    </span>
+
+                </div>
+
+                <a
+                    href="login.html"
+                    class="checkout-message-button">
+
+                    Entrar
+
+                </a>
+
+            </div>
+
+
+            <div
+                id="checkoutContent"
+                class="checkout-grid">
+
+
+                <div class="checkout-left">
+
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <div>
+
+                                <span class="checkout-step">
+                                    01
+                                </span>
+
+                                <div>
+
+                                    <h2>
+                                        Dados do cliente
+                                    </h2>
+
+                                    <p>
+                                        Informações associadas à sua conta.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div class="checkout-customer-grid">
+
+                            <div class="checkout-field">
+
+                                <label>
+                                    Nome
+                                </label>
+
+                                <div
+                                    id="checkoutCustomerName"
+                                    class="checkout-value">
+
+                                    —
+
+                                </div>
+
+                            </div>
+
+                            <div class="checkout-field">
+
+                                <label>
+                                    E-mail
+                                </label>
+
+                                <div
+                                    id="checkoutCustomerEmail"
+                                    class="checkout-value">
+
+                                    —
+
+                                </div>
+
+                            </div>
+
+                            <div class="checkout-field">
+
+                                <label>
+                                    Telefone
+                                </label>
+
+                                <div
+                                    id="checkoutCustomerPhone"
+                                    class="checkout-value">
+
+                                    —
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <div>
+
+                                <span class="checkout-step">
+                                    02
+                                </span>
+
+                                <div>
+
+                                    <h2>
+                                        Entrega
+                                    </h2>
+
+                                    <p>
+                                        Informe onde pretende receber a encomenda.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <div class="checkout-form-grid">
+
+                            <div class="checkout-input-group checkout-full">
+
+                                <label for="deliveryName">
+                                    Nome do destinatário
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="deliveryName"
+                                    autocomplete="name"
+                                    placeholder="Nome completo">
+
+                            </div>
+
+                            <div class="checkout-input-group">
+
+                                <label for="deliveryPhone">
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="deliveryPhone"
+                                    autocomplete="tel"
+                                    placeholder="Telefone">
+
+                            </div>
+
+                            <div class="checkout-input-group">
+
+                                <label for="deliveryProvince">
+                                    Província
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="deliveryProvince"
+                                    placeholder="Província">
+
+                            </div>
+
+                            <div class="checkout-input-group checkout-full">
+
+                                <label for="deliveryAddress">
+                                    Morada
+                                </label>
+
+                                <textarea
+                                    id="deliveryAddress"
+                                    rows="3"
+                                    placeholder="Rua, bairro, número da casa e outras referências"></textarea>
+
+                            </div>
+
+                            <div class="checkout-input-group checkout-full">
+
+                                <label for="deliveryReference">
+                                    Ponto de referência
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="deliveryReference"
+                                    placeholder="Ex.: próximo de...">
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <div>
+
+                                <span class="checkout-step">
+                                    03
+                                </span>
+
+                                <div>
+
+                                    <h2>
+                                        Método de pagamento
+                                    </h2>
+
+                                    <p>
+                                        Consulte os métodos disponíveis para efetuar o pagamento.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                        </div>
+
+
+                        <div class="payment-methods">
+
+                            <a
+                                href="pagamento.html"
+                                class="payment-method">
+
+                                <div class="payment-method-icon">
+
+                                    <i class="fa-solid fa-wallet"></i>
+
+                                </div>
+
+                                <div class="payment-method-info">
+
+                                    <strong>
+                                        Métodos de pagamento
+                                    </strong>
+
+                                    <span>
+                                        Ver Multicaixa Express, IBAN, PayPal e PayPay
+                                    </span>
+
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right payment-arrow"></i>
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+
+                <aside class="checkout-right">
+
+
+                    <section class="checkout-summary-card">
+
+                        <div class="checkout-summary-heading">
+
+                            <div>
+
+                                <span>
+                                    RESUMO
+                                </span>
+
+                                <h2>
+                                    A sua compra
+                                </h2>
+
+                            </div>
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </div>
+
+
+                        <div
+                            id="checkoutItems"
+                            class="checkout-items">
+
+                        </div>
+
+
+                        <div class="checkout-totals">
+
+                            <div>
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="checkoutSubtotal">
+                                    0 Kz
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Entrega
+                                </span>
+
+                                <strong id="checkoutDelivery">
+                                    A calcular
+                                </strong>
+
+                            </div>
+
+                            <div class="checkout-total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="checkoutTotal">
+                                    0 Kz
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="placeOrderButton"
+                            class="checkout-submit-button"
+                            disabled>
+
+                            <span>
+                                Confirmar pedido
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <div class="checkout-secure-note">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <span>
+                                O seu pedido será associado
+                                exclusivamente à sua conta.
+                            </span>
+
+                        </div>
+
+                    </section>
+
+
+                    <div class="checkout-info-box">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <p>
+                            Após a confirmação, o sistema irá gerar
+                            automaticamente um número único de pedido
+                            que ficará associado à sua conta.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="checkoutProcessing"
+    class="checkout-modal">
+
+    <div class="checkout-modal-card">
+
+        <div class="checkout-loader">
+
+            <i class="fa-solid fa-spinner"></i>
+
+        </div>
+
+        <h2>
+            A processar pedido
+        </h2>
+
+        <p>
+            Aguarde enquanto registamos o seu pedido com segurança.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div
+    id="checkoutResult"
+    class="checkout-modal">
+
+    <div class="checkout-modal-card">
+
+        <div
+            id="checkoutResultIcon"
+            class="checkout-result-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <h2 id="checkoutResultTitle">
+            Pedido criado
+        </h2>
+
+        <p id="checkoutResultMessage">
+            O seu pedido foi registado.
+        </p>
+
+        <div
+            id="checkoutOrderNumber"
+            class="checkout-order-number">
+
+        </div>
+
+        <a
+            href="pedidos.html"
+            class="checkout-result-button">
+
+            Ver meus pedidos
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<script
+    type="module"
+    src="../js/checkout.js">
+</script>
+
+</body>
+
+</html>
