@@ -1,0 +1,843 @@
+/* ======================================================
+   AV MARKET — CRIAR CONTA REVENDEDOR
+====================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+body.login-body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(199,154,59,.08),
+            transparent 38%
+        ),
+        #111111;
+
+    color:#f5f5f5;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.auth-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:68px;
+
+    z-index:9999;
+
+    background:#080808;
+
+    border-bottom:
+        1px solid rgba(199,154,59,.14);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+}
+
+.auth-header-container{
+
+    width:min(1180px,92%);
+
+    height:68px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.auth-brand{
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:5px;
+
+    text-decoration:none;
+
+}
+
+.auth-brand strong{
+
+    font-size:1.45rem;
+
+    font-weight:800;
+
+    letter-spacing:-.06em;
+
+    color:#C79A3B;
+
+}
+
+.auth-brand span{
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+}
+
+
+/* ======================================================
+   VOLTAR
+====================================================== */
+
+.auth-back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    text-decoration:none;
+
+    color:#999;
+
+    font-size:.7rem;
+
+    transition:.25s ease;
+
+}
+
+.auth-back:hover{
+
+    color:#C79A3B;
+
+}
+
+
+/* ======================================================
+   PÁGINA
+====================================================== */
+
+.login-page{
+
+    min-height:100vh;
+
+    padding:
+        105px
+        20px
+        55px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+}
+
+
+.login-container{
+
+    width:100%;
+
+    max-width:440px;
+
+    margin:auto;
+
+}
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.login-card{
+
+    width:100%;
+
+    padding:34px 30px 30px;
+
+    background:#181818;
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.28);
+
+}
+
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.login-mark{
+
+    width:58px;
+
+    height:58px;
+
+    margin:
+        0 auto 17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#101010;
+
+    border:
+        1px solid rgba(199,154,59,.20);
+
+}
+
+.login-mark span{
+
+    color:#C79A3B;
+
+    font-size:1.15rem;
+
+    font-weight:800;
+
+    letter-spacing:-.06em;
+
+}
+
+
+/* ======================================================
+   TÍTULO
+====================================================== */
+
+.login-welcome{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.login-welcome h1{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+    letter-spacing:-.025em;
+
+}
+
+.login-welcome p{
+
+    margin:6px 0 0;
+
+    color:#777;
+
+    font-size:.68rem;
+
+}
+
+
+/* ======================================================
+   MENSAGEM
+====================================================== */
+
+.login-message{
+
+    display:none;
+
+    margin-bottom:15px;
+
+    padding:11px 13px;
+
+    border-radius:9px;
+
+    font-size:.64rem;
+
+    line-height:1.5;
+
+    text-align:center;
+
+}
+
+.login-message.show{
+
+    display:block;
+
+}
+
+.login-message.error{
+
+    background:
+        rgba(180,35,24,.10);
+
+    border:
+        1px solid rgba(180,35,24,.25);
+
+    color:#e98982;
+
+}
+
+.login-message.success{
+
+    background:
+        rgba(199,154,59,.09);
+
+    border:
+        1px solid rgba(199,154,59,.22);
+
+    color:#E2BC6A;
+
+}
+
+
+/* ======================================================
+   FORMULÁRIO
+====================================================== */
+
+.login-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.login-field{
+
+    width:100%;
+
+}
+
+.login-field label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#b8b8b8;
+
+    font-size:.63rem;
+
+    font-weight:500;
+
+}
+
+
+/* ======================================================
+   INPUT
+====================================================== */
+
+.login-input{
+
+    position:relative;
+
+    width:100%;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#101010;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius:10px;
+
+    transition:.25s ease;
+
+}
+
+.login-input:focus-within{
+
+    border-color:
+        rgba(199,154,59,.55);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(199,154,59,.06);
+
+}
+
+.login-input > i{
+
+    width:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#777;
+
+    font-size:.82rem;
+
+    flex-shrink:0;
+
+}
+
+.login-input input{
+
+    width:100%;
+
+    height:100%;
+
+    padding:
+        0
+        12px
+        0
+        0;
+
+    border:0;
+
+    outline:0;
+
+    background:transparent;
+
+    color:#ffffff;
+
+    font-family:inherit;
+
+    font-size:.68rem;
+
+}
+
+.login-input input::placeholder{
+
+    color:#555;
+
+}
+
+
+/* ======================================================
+   MOSTRAR PALAVRA-PASSE
+====================================================== */
+
+.password-toggle{
+
+    width:42px;
+
+    height:42px;
+
+    margin-right:3px;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border:0;
+
+    outline:0;
+
+    background:transparent;
+
+    color:#666;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    transition:.25s ease;
+
+}
+
+.password-toggle:hover{
+
+    color:#C79A3B;
+
+    background:
+        rgba(199,154,59,.06);
+
+}
+
+.password-toggle i{
+
+    pointer-events:none;
+
+    font-size:.82rem;
+
+}
+
+
+/* ======================================================
+   TERMOS / CONTRATO
+====================================================== */
+
+.account-terms{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    color:#777;
+
+    font-size:.58rem;
+
+    line-height:1.55;
+
+}
+
+.account-terms input{
+
+    width:14px;
+
+    height:14px;
+
+    margin:1px 0 0;
+
+    flex-shrink:0;
+
+    accent-color:#C79A3B;
+
+    cursor:pointer;
+
+}
+
+
+/* ======================================================
+   BOTÃO
+====================================================== */
+
+.login-button{
+
+    width:100%;
+
+    min-height:48px;
+
+    margin-top:2px;
+
+    padding:0 17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    border:
+        1px solid #C79A3B;
+
+    border-radius:10px;
+
+    background:#C79A3B;
+
+    color:#080808;
+
+    font-family:inherit;
+
+    font-size:.67rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+.login-button:hover{
+
+    background:#E2BC6A;
+
+    border-color:#E2BC6A;
+
+    transform:translateY(-1px);
+
+}
+
+.login-button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/* ======================================================
+   DIVISOR
+====================================================== */
+
+.login-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:24px 0;
+
+    color:#555;
+
+    font-size:.58rem;
+
+}
+
+.login-divider::before,
+.login-divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:
+        rgba(255,255,255,.06);
+
+}
+
+
+/* ======================================================
+   LOGIN
+====================================================== */
+
+.account-create{
+
+    width:100%;
+
+}
+
+.account-create-title{
+
+    margin-bottom:10px;
+
+    text-align:center;
+
+}
+
+.account-create-title span{
+
+    color:#777;
+
+    font-size:.59rem;
+
+}
+
+.account-create-title strong{
+
+    display:block;
+
+    margin-top:2px;
+
+    color:#d5d5d5;
+
+    font-size:.65rem;
+
+    font-weight:500;
+
+}
+
+
+.account-option{
+
+    min-height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    padding:9px 11px;
+
+    text-decoration:none;
+
+    background:#101010;
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
+    border-radius:10px;
+
+    transition:.25s ease;
+
+}
+
+.account-option:hover{
+
+    border-color:
+        rgba(199,154,59,.25);
+
+    background:#141414;
+
+}
+
+.account-option-icon{
+
+    width:36px;
+
+    height:36px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:9px;
+
+    background:#181818;
+
+    color:#C79A3B;
+
+    font-size:.78rem;
+
+}
+
+.account-option-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.account-option-text strong{
+
+    color:#e5e5e5;
+
+    font-size:.64rem;
+
+    font-weight:600;
+
+}
+
+.account-option-text span{
+
+    margin-top:2px;
+
+    color:#666;
+
+    font-size:.55rem;
+
+}
+
+.account-arrow{
+
+    color:#555;
+
+    font-size:.65rem;
+
+}
+
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media(max-width:600px){
+
+    .auth-header,
+    .auth-header-container{
+
+        height:62px;
+
+    }
+
+    .login-page{
+
+        padding:
+            90px
+            15px
+            35px;
+
+    }
+
+    .login-card{
+
+        padding:
+            30px
+            22px
+            25px;
+
+        border-radius:16px;
+
+    }
+
+}
+
+@media(max-width:380px){
+
+    .login-card{
+
+        padding:
+            27px
+            17px
+            23px;
+
+    }
+
+    .login-input{
+
+        height:46px;
+
+    }
+
+    .login-button{
+
+        min-height:46px;
+
+    }
+
+}
