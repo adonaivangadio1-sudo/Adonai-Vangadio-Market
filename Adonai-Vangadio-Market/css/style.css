@@ -1,0 +1,7347 @@
+/*======================================================
+ADONAI VANGADIO MARKET
+STYLE.CSS
+VERSÃO 2.0 PREMIUM
+======================================================*/
+
+/*======================================================
+ROOT
+======================================================*/
+
+:root{
+
+--gold:#C79A3B;
+--gold-light:#E2BC6A;
+--gold-dark:#A9791F;
+
+--cream:#F8F6F1;
+
+--white:#FFFFFF;
+
+--black:#111111;
+
+--dark:#1F2937;
+
+--gray:#6B7280;
+
+--gray-light:#F3F4F6;
+
+--border:#E5E7EB;
+
+--success:#16A34A;
+
+--danger:#DC2626;
+
+--radius-xs:8px;
+--radius-sm:12px;
+--radius-md:18px;
+--radius-lg:24px;
+--radius-xl:32px;
+
+--shadow-xs:
+0 2px 8px rgba(0,0,0,.05);
+
+--shadow-sm:
+0 8px 25px rgba(0,0,0,.06);
+
+--shadow-md:
+0 15px 40px rgba(0,0,0,.08);
+
+--shadow-lg:
+0 25px 60px rgba(0,0,0,.12);
+
+--transition:.35s cubic-bezier(.4,0,.2,1);
+
+--container:1450px;
+
+}
+
+/*======================================================
+RESET
+======================================================*/
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+font-size:16px;
+
+}
+
+body{
+
+font-family:"Poppins",sans-serif;
+
+background:var(--cream);
+
+color:var(--dark);
+
+overflow-x:hidden;
+
+line-height:1.6;
+
+}
+
+/*======================================================
+SELEÇÃO
+======================================================*/
+
+::selection{
+
+background:var(--gold);
+
+color:var(--white);
+
+}
+
+/*======================================================
+SCROLLBAR
+======================================================*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--gray-light);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--gold-dark);
+
+}
+
+/*======================================================
+ELEMENTOS
+======================================================*/
+
+img{
+
+display:block;
+
+width:100%;
+
+height:auto;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+button{
+
+border:none;
+
+background:none;
+
+cursor:pointer;
+
+font-family:inherit;
+
+}
+
+input,
+textarea,
+select{
+
+font-family:inherit;
+
+outline:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+/*======================================================
+CONTAINER
+======================================================*/
+
+.container{
+
+width:min(95%,var(--container));
+
+margin:auto;
+
+}
+
+/*======================================================
+MAIN
+======================================================*/
+
+main{
+
+width:100%;
+
+min-height:100vh;
+
+}
+
+/*======================================================
+SECTIONS
+======================================================*/
+
+section{
+
+padding:90px 0;
+
+position:relative;
+
+}
+
+/*======================================================
+TÍTULOS
+======================================================*/
+
+.section-tag{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+background:rgba(199,154,59,.10);
+
+color:var(--gold-dark);
+
+font-size:.80rem;
+
+font-weight:700;
+
+letter-spacing:.8px;
+
+margin-bottom:18px;
+
+text-transform:uppercase;
+
+}
+
+.section-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-end;
+
+gap:40px;
+
+margin-bottom:45px;
+
+}
+
+.section-header h2{
+
+font-size:2.35rem;
+
+font-weight:700;
+
+color:var(--black);
+
+line-height:1.2;
+
+}
+
+.section-header p{
+
+margin-top:12px;
+
+font-size:1rem;
+
+color:var(--gray);
+
+max-width:700px;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+font-size:2.6rem;
+
+margin:18px 0;
+
+color:var(--black);
+
+}
+
+.section-title p{
+
+max-width:760px;
+
+margin:auto;
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+/*======================================================
+BOTÕES
+======================================================*/
+
+.btn-primary{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+padding:16px 34px;
+
+border-radius:999px;
+
+background:linear-gradient(
+135deg,
+var(--gold),
+var(--gold-light));
+
+color:var(--white);
+
+font-size:.96rem;
+
+font-weight:600;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow-md);
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.btn-secondary{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+padding:16px 34px;
+
+border-radius:999px;
+
+background:transparent;
+
+border:2px solid var(--gold);
+
+color:var(--gold-dark);
+
+font-size:.96rem;
+
+font-weight:600;
+
+transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+background:var(--gold);
+
+color:var(--white);
+
+transform:translateY(-4px);
+
+}
+
+/*======================================================
+LINK "VER MAIS"
+======================================================*/
+
+.see-all{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+font-weight:600;
+
+font-size:.95rem;
+
+color:var(--gold-dark);
+
+transition:var(--transition);
+
+}
+
+.see-all:hover{
+
+gap:18px;
+
+color:var(--gold);
+
+}
+
+/*======================================================
+INTRODUÇÃO
+======================================================*/
+
+.market-intro{
+
+padding-top:140px;
+
+padding-bottom:90px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#FFFFFF,
+
+var(--cream)
+
+);
+
+}
+
+.intro-wrapper{
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.intro-content h1{
+
+font-size:4rem;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin:25px 0;
+
+color:var(--black);
+
+}
+
+.intro-content p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+color:var(--gray);
+
+max-width:650px;
+
+margin-bottom:40px;
+
+}
+
+.intro-buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+/*======================================================
+ESTATÍSTICAS HERO
+======================================================*/
+
+.intro-stats{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:22px;
+
+}
+
+.intro-card{
+
+background:#FFFFFF;
+
+padding:35px;
+
+border-radius:24px;
+
+box-shadow:var(--shadow-sm);
+
+transition:var(--transition);
+
+border:1px solid var(--border);
+
+}
+
+.intro-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.intro-card i{
+
+font-size:2rem;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+.intro-card h3{
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+color:var(--black);
+
+}
+
+.intro-card span{
+
+color:var(--gray);
+
+font-size:.95rem;
+
+}
+
+/*======================================================
+CATEGORIAS
+======================================================*/
+
+.categories{
+
+background:#FFFFFF;
+
+}
+
+.categories-grid{
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+gap:24px;
+
+}
+
+.category-card{
+
+background:var(--cream);
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:32px 20px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+transition:var(--transition);
+
+}
+
+.category-card:hover{
+
+transform:translateY(-8px);
+
+background:#FFFFFF;
+
+border-color:var(--gold);
+
+box-shadow:var(--shadow-md);
+
+}
+
+.category-card i{
+
+font-size:2.3rem;
+
+color:var(--gold);
+
+margin-bottom:18px;
+
+}
+
+.category-card span{
+
+font-weight:600;
+
+font-size:.96rem;
+
+color:var(--dark);
+
+}
+/*======================================================
+HEADER FIXO PREMIUM
+======================================================*/
+
+.market-header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:75px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(18px);
+
+z-index:1000;
+
+border-bottom:1px solid var(--border);
+
+transition:var(--transition);
+
+}
+
+.market-header.sticky{
+
+box-shadow:var(--shadow-md);
+
+}
+
+.header-wrapper{
+
+height:75px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:25px;
+
+}
+
+
+/*======================================================
+MARCA
+======================================================*/
+
+.market-brand{
+
+font-size:1.35rem;
+
+font-weight:800;
+
+color:var(--black);
+
+letter-spacing:-.5px;
+
+white-space:nowrap;
+
+}
+
+.market-brand span{
+
+color:var(--gold);
+
+}
+
+
+/*======================================================
+ÁREA DE PESQUISA
+======================================================*/
+
+.header-search{
+
+flex:1;
+
+max-width:650px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.search-box{
+
+width:100%;
+
+display:flex;
+
+align-items:center;
+
+background:#fff;
+
+border:1px solid var(--border);
+
+border-radius:50px;
+
+overflow:hidden;
+
+transition:var(--transition);
+
+}
+
+.search-box:focus-within{
+
+border-color:var(--gold);
+
+box-shadow:0 0 0 4px rgba(199,154,59,.12);
+
+}
+
+
+.search-box input{
+
+flex:1;
+
+height:48px;
+
+padding:0 20px;
+
+border:none;
+
+background:transparent;
+
+font-size:.95rem;
+
+}
+
+
+.search-button{
+
+width:50px;
+
+height:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:var(--gold);
+
+color:#fff;
+
+font-size:1.1rem;
+
+}
+
+
+.image-search{
+
+width:45px;
+
+height:45px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:var(--cream);
+
+color:var(--gold-dark);
+
+transition:var(--transition);
+
+}
+
+
+.image-search:hover{
+
+background:var(--gold);
+
+color:#fff;
+
+}
+
+
+/*======================================================
+MENU BUTTON
+======================================================*/
+
+.menu-mobile{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:var(--cream);
+
+color:var(--black);
+
+font-size:1.2rem;
+
+transition:var(--transition);
+
+}
+
+.menu-mobile:hover{
+
+background:var(--gold);
+
+color:#fff;
+
+}
+
+
+/*======================================================
+MENU LATERAL
+======================================================*/
+
+.side-menu{
+
+position:fixed;
+
+top:0;
+
+right:-420px;
+
+width:380px;
+
+height:100vh;
+
+background:#fff;
+
+z-index:2000;
+
+padding:35px;
+
+box-shadow:-20px 0 50px rgba(0,0,0,.15);
+
+transition:var(--transition);
+
+}
+
+.side-menu.active{
+
+right:0;
+
+}
+
+
+.menu-close{
+
+position:absolute;
+
+top:25px;
+
+right:25px;
+
+width:40px;
+
+height:40px;
+
+border-radius:50%;
+
+background:var(--cream);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+.side-menu ul{
+
+margin-top:70px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.side-menu a{
+
+font-size:1rem;
+
+font-weight:600;
+
+padding:14px;
+
+border-radius:12px;
+
+transition:var(--transition);
+
+}
+
+
+.side-menu a:hover{
+
+background:var(--cream);
+
+color:var(--gold-dark);
+
+}
+
+
+/*======================================================
+HERO PRODUTOS
+======================================================*/
+
+.hero{
+
+padding-top:160px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#fff,
+
+var(--cream)
+
+);
+
+}
+
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+
+.hero-content h1{
+
+font-size:3.8rem;
+
+line-height:1.15;
+
+font-weight:800;
+
+color:var(--black);
+
+}
+
+
+.hero-content p{
+
+margin:25px 0 40px;
+
+font-size:1.1rem;
+
+color:var(--gray);
+
+max-width:600px;
+
+}
+
+
+.hero-image{
+
+height:450px;
+
+border-radius:35px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+var(--gold),
+
+var(--gold-light)
+
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#fff;
+
+font-size:5rem;
+
+box-shadow:var(--shadow-lg);
+
+}
+/*======================================================
+PRODUTOS
+======================================================*/
+
+.market-section{
+
+background:#fff;
+
+}
+
+
+.product-slider{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+.products-row{
+
+display:flex;
+
+gap:25px;
+
+overflow-x:auto;
+
+scroll-behavior:smooth;
+
+flex:1;
+
+padding:15px 5px;
+
+scrollbar-width:none;
+
+}
+
+
+.products-row::-webkit-scrollbar{
+
+display:none;
+
+}
+
+
+.slider-btn{
+
+width:52px;
+
+height:52px;
+
+border-radius:50%;
+
+background:#fff;
+
+border:1px solid var(--border);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:1.2rem;
+
+color:var(--gold-dark);
+
+box-shadow:var(--shadow-sm);
+
+transition:var(--transition);
+
+flex-shrink:0;
+
+}
+
+
+.slider-btn:hover{
+
+background:var(--gold);
+
+color:#fff;
+
+transform:scale(1.08);
+
+}
+
+
+
+/*======================================================
+CARD PRODUTO
+======================================================*/
+
+.product-card{
+
+min-width:230px;
+
+background:#fff;
+
+border-radius:22px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+transition:var(--transition);
+
+}
+
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+.product-image{
+
+height:210px;
+
+background:var(--gray-light);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+.product-image img{
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+.product-info{
+
+padding:20px;
+
+}
+
+
+.product-info h3{
+
+font-size:1rem;
+
+font-weight:700;
+
+margin-bottom:8px;
+
+color:var(--black);
+
+}
+
+
+.product-price{
+
+font-size:1.15rem;
+
+font-weight:800;
+
+color:var(--gold-dark);
+
+}
+
+
+.product-description{
+
+font-size:.9rem;
+
+color:var(--gray);
+
+margin-top:8px;
+
+}
+
+
+
+/*======================================================
+VENDEDOR
+======================================================*/
+
+.seller-section{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#fff,
+
+var(--cream)
+
+);
+
+}
+
+
+.seller-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+
+.seller-content h2{
+
+font-size:2.7rem;
+
+color:var(--black);
+
+margin:20px 0;
+
+}
+
+
+.seller-content p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+
+.seller-list{
+
+margin:35px 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+
+.seller-list li{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-weight:500;
+
+}
+
+
+.seller-list i{
+
+color:var(--gold);
+
+}
+
+
+.seller-card{
+
+height:430px;
+
+border-radius:35px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+var(--gold),
+
+var(--gold-light)
+
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:40px;
+
+color:#fff;
+
+text-align:center;
+
+box-shadow:var(--shadow-lg);
+
+}
+
+
+.seller-card i{
+
+font-size:5rem;
+
+margin-bottom:25px;
+
+}
+
+
+/*======================================================
+COMPRAMOS PRODUTOS
+======================================================*/
+
+.buy-products{
+
+background:#fff;
+
+}
+
+
+.buy-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+
+.buy-card{
+
+background:var(--cream);
+
+padding:40px 30px;
+
+border-radius:25px;
+
+text-align:center;
+
+transition:var(--transition);
+
+}
+
+
+.buy-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-md);
+
+}
+
+
+.buy-card i{
+
+font-size:2.8rem;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+.buy-card h3{
+
+margin-bottom:12px;
+
+font-size:1.25rem;
+
+}
+
+
+.buy-card p{
+
+color:var(--gray);
+
+}
+/*======================================================
+ESTATÍSTICAS
+======================================================*/
+
+.market-stats{
+
+background:#fff;
+
+}
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+
+.stat-card{
+
+background:#fff;
+
+border:1px solid var(--border);
+
+padding:40px 25px;
+
+border-radius:25px;
+
+text-align:center;
+
+transition:var(--transition);
+
+}
+
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-md);
+
+border-color:var(--gold);
+
+}
+
+
+.stat-card i{
+
+font-size:2.5rem;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+.stat-card h3{
+
+font-size:2.5rem;
+
+font-weight:800;
+
+color:var(--black);
+
+}
+
+
+.stat-card p{
+
+color:var(--gray);
+
+}
+
+
+
+/*======================================================
+CONTACTO
+======================================================*/
+
+.contact-section{
+
+background:var(--cream);
+
+}
+
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:start;
+
+}
+
+
+.contact-info h2{
+
+font-size:2.5rem;
+
+margin-bottom:20px;
+
+}
+
+
+.contact-info p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+}
+
+
+.contact-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.contact-list li{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+font-size:1rem;
+
+}
+
+
+.contact-list i{
+
+width:45px;
+
+height:45px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:#fff;
+
+color:var(--gold);
+
+box-shadow:var(--shadow-xs);
+
+}
+
+
+.contact-form{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow-md);
+
+}
+
+
+.form-group{
+
+margin-bottom:20px;
+
+}
+
+
+.form-group input,
+.form-group textarea{
+
+width:100%;
+
+padding:15px 18px;
+
+border:1px solid var(--border);
+
+border-radius:15px;
+
+background:#fff;
+
+transition:var(--transition);
+
+}
+
+
+.form-group textarea{
+
+height:140px;
+
+resize:none;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+border-color:var(--gold);
+
+}
+
+
+
+/*======================================================
+FOOTER
+======================================================*/
+
+.market-footer{
+
+background:#111111;
+
+color:#fff;
+
+padding:70px 0 25px;
+
+}
+
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1.2fr;
+
+gap:40px;
+
+}
+
+
+.footer-column h3{
+
+font-size:1.6rem;
+
+margin-bottom:20px;
+
+}
+
+
+.footer-column h4{
+
+font-size:1.1rem;
+
+margin-bottom:22px;
+
+}
+
+
+.footer-column p{
+
+color:#cfcfcf;
+
+line-height:1.8;
+
+}
+
+
+.footer-column ul{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+
+.footer-column a{
+
+color:#cfcfcf;
+
+transition:var(--transition);
+
+}
+
+
+.footer-column a:hover{
+
+color:var(--gold-light);
+
+}
+
+
+.footer-social{
+
+display:flex;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+
+.footer-social a{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#222;
+
+color:#fff;
+
+}
+
+
+.footer-bottom{
+
+margin-top:45px;
+
+padding-top:25px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+text-align:center;
+
+color:#aaa;
+
+}
+/*======================================================
+NAVEGAÇÃO FIXA MOBILE
+======================================================*/
+
+.mobile-navigation{
+
+position:fixed;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:60px;
+
+background:#ffffff;
+
+display:none;
+
+justify-content:space-around;
+
+align-items:center;
+
+z-index:1500;
+
+box-shadow:0 -6px 20px rgba(0,0,0,.08);
+
+border-top:1px solid rgba(0,0,0,.06);
+
+}
+
+
+/*======================================================
+LINKS DO RODAPÉ FIXO
+======================================================*/
+
+.mobile-navigation a{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:3px;
+
+font-size:.68rem;
+
+line-height:1;
+
+color:var(--gray);
+
+position:relative;
+
+height:100%;
+
+min-width:52px;
+
+transition:var(--transition);
+
+}
+
+
+/*======================================================
+ÍCONES
+======================================================*/
+
+.mobile-navigation i{
+
+font-size:1.05rem;
+
+line-height:1;
+
+}
+
+
+/*======================================================
+ESTADO ATIVO
+======================================================*/
+
+.mobile-navigation .active,
+
+.mobile-navigation a:hover{
+
+color:var(--gold);
+
+}
+
+
+/*======================================================
+TEXTOS
+======================================================*/
+
+.mobile-navigation span{
+
+font-size:.62rem;
+
+line-height:1;
+
+white-space:nowrap;
+
+}
+
+
+/*======================================================
+CONTADORES
+======================================================*/
+
+.mobile-navigation a span[id]{
+
+position:absolute;
+
+top:8px;
+
+right:8px;
+
+min-width:15px;
+
+height:15px;
+
+padding:0 4px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50px;
+
+background:var(--gold);
+
+color:#fff;
+
+font-size:.52rem;
+
+font-weight:700;
+
+line-height:1;
+
+}
+
+
+
+/*======================================================
+LOADER REMOVIDO
+======================================================*/
+
+/*
+Sem loader.
+O site abre diretamente.
+*/
+
+
+/*======================================================
+ANIMAÇÕES
+======================================================*/
+
+.fade-up{
+
+animation:fadeUp .7s ease forwards;
+
+}
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/*======================================================
+RESPONSIVIDADE
+======================================================*/
+
+
+@media(max-width:1200px){
+
+
+.hero-grid,
+.intro-wrapper,
+.seller-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero-image{
+
+height:350px;
+
+}
+
+
+.categories-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:992px){
+
+
+.header-search{
+
+display:none;
+
+}
+
+
+.menu-mobile{
+
+display:flex;
+
+}
+
+
+.categories-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+
+.buy-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.mobile-navigation{
+
+display:flex;
+
+}
+
+
+body{
+
+padding-bottom:75px;
+
+}
+
+
+.market-header{
+
+height:70px;
+
+}
+
+
+}
+
+
+@media(max-width:768px){
+
+
+section{
+
+padding:60px 0;
+
+}
+
+
+.hero-content h1,
+.intro-content h1{
+
+font-size:2.5rem;
+
+}
+
+
+.section-title h2,
+.section-header h2{
+
+font-size:2rem;
+
+}
+
+
+.categories-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.product-card{
+
+min-width:180px;
+
+}
+
+
+.slider-btn{
+
+display:none;
+
+}
+
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.contact-form{
+
+padding:25px;
+
+}
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+.market-brand{
+
+font-size:1rem;
+
+}
+
+
+.hero-content h1,
+.intro-content h1{
+
+font-size:2rem;
+
+}
+
+
+.btn-primary,
+.btn-secondary{
+
+width:100%;
+
+}
+
+
+.categories-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+.mobile-navigation{
+
+height:65px;
+
+}
+
+
+}
+/*======================================================
+CSS/STYLE.CSS
+
+AJUSTES FINAIS
+======================================================*/
+
+
+body{
+
+padding-bottom:80px;
+
+}
+
+
+
+.notification{
+
+position:fixed;
+
+right:25px;
+
+top:100px;
+
+background:#111;
+
+color:#fff;
+
+padding:15px 25px;
+
+border-radius:15px;
+
+z-index:5000;
+
+animation:fadeUp .5s ease;
+
+}
+
+
+
+.empty-state{
+
+padding:60px;
+
+text-align:center;
+
+background:white;
+
+border-radius:25px;
+
+border:2px dashed var(--border);
+
+}
+
+
+
+.empty-state i{
+
+font-size:50px;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+
+
+.btn-gold{
+
+background:var(--gold);
+
+color:#fff;
+
+padding:15px 30px;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+
+
+.btn-gold:hover{
+
+transform:translateY(-4px);
+
+background:var(--gold-dark);
+
+}
+
+/* ==================================================
+   AV MARKET — CABEÇALHO
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --av-black: #171717;
+    --av-dark: #222222;
+    --av-gray: #707070;
+    --av-border: #d7d7d7;
+    --av-light: #f7f7f7;
+    --av-white: #ffffff;
+
+    --header-height: 82px;
+
+    --transition: 0.25s ease;
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: #f8f8f8;
+    color: var(--av-black);
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.market-header {
+    width: 100%;
+    height: var(--header-height);
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e7e7e7;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.header-container {
+    width: 100%;
+    max-width: 1500px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* ==================================================
+   LOGOTIPO
+================================================== */
+
+.market-logo {
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    white-space: nowrap;
+
+    min-width: 150px;
+}
+
+.logo-av {
+    font-size: 25px;
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: var(--av-black);
+}
+
+.logo-market {
+    font-size: 21px;
+    font-weight: 500;
+
+    letter-spacing: -0.7px;
+
+    color: #555;
+}
+
+
+/* ==================================================
+   PESQUISA
+================================================== */
+
+.search-wrapper {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+
+.search-box {
+    width: 100%;
+    max-width: 650px;
+
+    height: 50px;
+
+    background: var(--av-light);
+
+    border: 1.5px solid var(--av-border);
+
+    border-radius: 28px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7px 0 15px;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+
+/* ==================================================
+   EFEITO AO CLICAR
+================================================== */
+
+.search-box:focus-within {
+    background: #fff;
+
+    border-color: #a9a9a9;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ==================================================
+   BOTÃO PESQUISA
+================================================== */
+
+.search-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+.search-icon svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke: currentColor;
+    stroke-width: 2;
+
+    stroke-linecap: round;
+}
+
+
+/* ==================================================
+   INPUT
+================================================== */
+
+.search-box input[type="text"] {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 10px;
+
+    font-size: 15px;
+
+    color: #222;
+
+    font-family: inherit;
+}
+
+
+.search-box input[type="text"]::placeholder {
+    color: #858585;
+}
+
+
+/* ==================================================
+   PESQUISA POR IMAGEM
+================================================== */
+
+.image-search-button {
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #555;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.image-search-button:hover {
+    background: #e9e9e9;
+
+    color: #111;
+}
+
+
+.image-search-button:active {
+    transform: scale(0.92);
+}
+
+
+.image-search-button svg {
+    width: 21px;
+    height: 21px;
+
+    fill: none;
+
+    stroke: currentColor;
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==================================================
+   MINHA CONTA
+================================================== */
+
+.account-link {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    position: relative;
+}
+
+
+.account-photo {
+    width: 48px;
+    height: 48px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid #fff;
+
+    box-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.account-link:hover .account-photo {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==================================================
+   CONTEÚDO DE TESTE
+================================================== */
+
+.demo-content {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 25px;
+
+    text-align: center;
+}
+
+
+.demo-content h1 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+.demo-content p {
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   TABLETS
+================================================== */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        gap: 18px;
+
+        padding: 0 20px;
+    }
+
+    .market-logo {
+        min-width: auto;
+    }
+
+    .logo-av {
+        font-size: 23px;
+    }
+
+    .logo-market {
+        font-size: 19px;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+}
+
+
+/* ==================================================
+   TELEMÓVEIS
+================================================== */
+
+@media (max-width: 650px) {
+
+    :root {
+        --header-height: 72px;
+    }
+
+
+    .header-container {
+        padding: 0 14px;
+
+        gap: 10px;
+    }
+
+
+    /* LOGO */
+
+    .market-logo {
+        min-width: auto;
+
+        gap: 2px;
+    }
+
+    .logo-av {
+        font-size: 20px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .logo-market {
+        font-size: 16px;
+    }
+
+
+    /* PESQUISA */
+
+    .search-box {
+        height: 45px;
+
+        padding-left: 9px;
+        padding-right: 4px;
+    }
+
+
+    .search-icon {
+        width: 30px;
+    }
+
+
+    .search-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .search-box input[type="text"] {
+        font-size: 13px;
+
+        padding: 0 5px;
+    }
+
+
+    .search-box input[type="text"]::placeholder {
+        content: "Pesquisar...";
+    }
+
+
+    .image-search-button {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .image-search-button svg {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    /* CONTA */
+
+    .account-link,
+    .account-photo {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+/* ==================================================
+   TELEMÓVEIS PEQUENOS
+================================================== */
+
+@media (max-width: 430px) {
+
+    .header-container {
+        padding: 0 10px;
+
+        gap: 8px;
+    }
+
+
+    .logo-market {
+        display: none;
+    }
+
+
+    .logo-av {
+        font-size: 22px;
+    }
+
+
+    .account-link,
+    .account-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .search-box {
+        height: 43px;
+    }
+
+
+    .search-box input[type="text"] {
+        font-size: 12px;
+    }
+}
+/* ==================================================
+   AV MARKET — CABEÇALHO COMPACTO
+================================================== */
+
+:root {
+    --header-height: 58px;
+}
+
+
+/* CABEÇALHO */
+
+.market-header {
+    height: 58px;
+}
+
+
+/* CONTAINER */
+
+.header-container {
+    padding: 0 16px;
+    gap: 14px;
+}
+
+
+/* LOGO */
+
+.market-logo {
+    min-width: auto;
+    gap: 3px;
+}
+
+.logo-av {
+    font-size: 19px;
+    letter-spacing: -1.5px;
+}
+
+.logo-market {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+}
+
+
+/* PESQUISA */
+
+.search-box {
+    height: 38px;
+    max-width: 500px;
+    padding: 0 5px 0 9px;
+    border-radius: 22px;
+}
+
+
+/* ÍCONE DE PESQUISA */
+
+.search-icon {
+    width: 29px;
+    height: 29px;
+}
+
+.search-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* TEXTO DA PESQUISA */
+
+.search-box input[type="text"] {
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+
+/* ÍCONE DE FOTOGRAFIA */
+
+.image-search-button {
+    width: 30px;
+    height: 30px;
+}
+
+.image-search-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* FOTOGRAFIA DA CONTA */
+
+.account-link,
+.account-photo {
+    width: 34px;
+    height: 34px;
+}
+
+.account-photo {
+    border-width: 1.5px;
+}
+
+
+/* ==================================================
+   TELEMÓVEL
+================================================== */
+
+@media (max-width: 650px) {
+
+    .market-header {
+        height: 55px;
+    }
+
+    .header-container {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .logo-av {
+        font-size: 17px;
+    }
+
+    .logo-market {
+        font-size: 13px;
+    }
+
+    .search-box {
+        height: 36px;
+        border-radius: 20px;
+    }
+
+    .search-box input[type="text"] {
+        font-size: 11px;
+    }
+
+    .search-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .search-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .image-search-button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .image-search-button svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .account-link,
+    .account-photo {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+/* ==================================================
+   TELEMÓVEL PEQUENO
+================================================== */
+
+@media (max-width: 430px) {
+
+    .market-header {
+        height: 52px;
+    }
+
+    .header-container {
+        padding: 0 8px;
+        gap: 7px;
+    }
+
+    .logo-av {
+        font-size: 16px;
+    }
+
+    .logo-market {
+        display: none;
+    }
+
+    .search-box {
+        height: 34px;
+    }
+
+    .search-box input[type="text"] {
+        font-size: 10px;
+    }
+
+    .account-link,
+    .account-photo {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* ======================================================
+   AV MARKET — LOGIN EXECUTIVO
+====================================================== */
+
+
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+
+:root {
+
+    --login-gold: #c79a3b;
+    --login-gold-light: #e2bc6a;
+    --login-black: #181818;
+    --login-gray: #777;
+    --login-border: #e5e5e5;
+    --login-background: #f8f7f4;
+    --login-white: #ffffff;
+
+}
+
+
+/* ======================================================
+   BODY
+====================================================== */
+
+.login-body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(199,154,59,.08),
+            transparent 45%
+        ),
+        var(--login-background);
+
+    color: var(--login-black);
+
+    font-family:
+        "Poppins",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.auth-header {
+
+    height: 62px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-bottom:
+        1px solid rgba(0,0,0,.06);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+.auth-header-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ======================================================
+   BRAND
+====================================================== */
+
+.auth-brand {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 3px;
+
+    text-decoration: none;
+
+    color: var(--login-black);
+
+}
+/* ======================================================
+   FORM
+====================================================== */
+
+.login-form {
+
+    width: 100%;
+
+}
+
+
+.login-field {
+
+    margin-bottom: 17px;
+
+}
+
+
+.login-field label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #454545;
+
+}
+
+
+/* ======================================================
+   INPUT
+====================================================== */
+
+.login-input {
+
+    width: 100%;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        0 13px;
+
+    background: #fafafa;
+
+    border:
+        1px solid var(--login-border);
+
+    border-radius: 11px;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.login-input:focus-within {
+
+    background: #fff;
+
+    border-color:
+        rgba(199,154,59,.7);
+
+    box-shadow:
+        0 0 0 3px rgba(199,154,59,.08);
+
+}
+
+
+.login-input > i {
+
+    width: 16px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #888;
+
+}
+
+
+.login-input input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    color: #222;
+
+}
+
+
+.login-input input::placeholder {
+
+    color: #aaa;
+
+}
+
+
+/* ======================================================
+   MOSTRAR SENHA
+====================================================== */
+
+.password-toggle {
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 4px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #999;
+
+    cursor: pointer;
+
+}
+
+
+.password-toggle i {
+
+    font-size: 12px;
+
+}
+
+
+.password-toggle:hover {
+
+    color: #333;
+
+}
+
+
+/* ======================================================
+   ESQUECEU
+====================================================== */
+
+.login-forgot {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin:
+        -2px 0 20px;
+
+}
+
+
+.login-forgot a {
+
+    color: #777;
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+
+}
+
+
+.login-forgot a:hover {
+
+    color: var(--login-gold);
+
+}
+
+
+/* ======================================================
+   BOTÃO ENTRAR
+====================================================== */
+
+.login-button {
+
+    width: 100%;
+
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--login-black),
+            #292929
+        );
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.login-button i {
+
+    font-size: 10px;
+
+    transition: transform .25s ease;
+
+}
+
+
+.login-button:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 11px 25px rgba(0,0,0,.18);
+
+}
+
+
+.login-button:hover i {
+
+    transform: translateX(3px);
+
+}
+
+
+.login-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* ======================================================
+   DIVISOR
+====================================================== */
+
+.login-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        25px 0 22px;
+
+}
+
+
+.login-divider::before,
+.login-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #eeeeee;
+
+}
+
+
+.login-divider span {
+
+    color: #aaa;
+
+    font-size: 10px;
+
+}
+
+
+/* ======================================================
+   CRIAR CONTA
+====================================================== */
+
+.account-create-title {
+
+    text-align: center;
+
+    margin-bottom: 13px;
+
+}
+
+
+.account-create-title span {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 10px;
+
+}
+
+
+.account-create-title strong {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #333;
+
+}
+
+
+/* ======================================================
+   OPÇÕES
+====================================================== */
+
+.account-options {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+/* ======================================================
+   CARD DE CONTA
+====================================================== */
+
+.account-option {
+
+    position: relative;
+
+    min-height: 74px;
+
+    padding:
+        13px;
+
+    border:
+        1px solid #e8e8e8;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.account-option:hover {
+
+    border-color:
+        rgba(199,154,59,.45);
+
+    background:
+        #fffdf8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.06);
+
+}
+
+
+/* ======================================================
+   ÍCONE
+====================================================== */
+
+.account-option-icon {
+
+    width: 29px;
+
+    height: 29px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #f5f3ee;
+
+    color:
+        var(--login-gold);
+
+}
+
+
+.account-option-icon i {
+
+    font-size: 11px;
+
+}
+
+
+/* ======================================================
+   TEXTO
+====================================================== */
+
+.account-option-text {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.account-option-text strong {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: #333;
+
+}
+
+
+.account-option-text span {
+
+    font-size: 9px;
+
+    color: #999;
+
+}
+
+
+/* ======================================================
+   SETA
+====================================================== */
+
+.account-arrow {
+
+    margin-left: auto;
+
+    color: #bbb;
+
+    font-size: 8px;
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .auth-header {
+
+        height: 56px;
+
+    }
+
+
+    .auth-header-container {
+
+        padding:
+            0 15px;
+
+    }
+
+
+    .auth-brand strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .auth-brand span {
+
+        font-size: 13px;
+
+    }
+
+
+    .auth-back span {
+
+        display: none;
+
+    }
+
+
+    .auth-back i {
+
+        font-size: 13px;
+
+    }
+
+
+    .login-page {
+
+        min-height:
+            calc(100vh - 56px);
+
+        padding:
+            25px 14px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .login-card {
+
+        max-width: 390px;
+
+        padding:
+            28px 22px 24px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .login-mark {
+
+        width: 38px;
+
+        height: 38px;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .login-welcome {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .login-welcome h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .account-options {
+
+        gap: 8px;
+
+    }
+
+
+    .account-option {
+
+        min-height: 68px;
+
+        padding: 10px;
+
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE PEQUENO
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .login-card {
+
+        padding:
+            25px 17px 22px;
+
+    }
+
+
+    .login-welcome h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .account-option {
+
+        gap: 6px;
+
+        padding: 9px;
+
+    }
+
+
+    .account-option-icon {
+
+        width: 27px;
+
+        height: 27px;
+
+    }
+
+
+    .account-option-text strong {
+
+        font-size: 9px;
+
+    }
+
+
+    .account-option-text span {
+
+        font-size: 8px;
+
+    }
+
+}
+/* ======================================================
+   AV MARKET — MINHA CONTA
+   DESIGN EXECUTIVO PREMIUM
+====================================================== */
+
+
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+
+.account-body {
+
+    --account-gold: #C79A3B;
+    --account-gold-light: #E2BC6A;
+    --account-black: #181818;
+    --account-gray: #777;
+    --account-border: #E6E6E6;
+    --account-background: #F8F7F4;
+    --account-white: #FFFFFF;
+
+    background:
+        radial-gradient(
+            circle at 50% -15%,
+            rgba(199,154,59,.09),
+            transparent 43%
+        ),
+        var(--account-background);
+
+}
+
+
+/* ======================================================
+   MARCA DO HEADER
+====================================================== */
+
+.market-brand a {
+
+    text-decoration: none;
+
+    color: #181818;
+
+    font-weight: 800;
+
+    font-size: 20px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.market-brand a span {
+
+    font-weight: 500;
+
+    color: #666;
+
+    margin-left: 2px;
+
+}
+
+
+/* ======================================================
+   ÁREA PRINCIPAL
+====================================================== */
+
+.account-page {
+
+    min-height:
+        calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        50px 20px 80px;
+
+}
+
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+
+.login-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+/* ======================================================
+   LOGIN BOX
+====================================================== */
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 410px;
+
+    padding:
+        38px 40px 34px;
+
+    background:
+        var(--account-white);
+
+    border:
+        1px solid rgba(0,0,0,.055);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.075);
+
+}
+
+
+/* ======================================================
+   MARCA CENTRAL
+====================================================== */
+
+.login-mark {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin:
+        0 auto 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--account-black);
+
+    color:
+        var(--account-gold-light);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+}
+
+
+.login-mark span {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+.login-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.login-header h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -1.2px;
+
+}
+
+
+.login-header p {
+
+    margin:
+        7px 0 0;
+
+    color: #8A8A8A;
+
+    font-size: 11px;
+
+    letter-spacing: .1px;
+
+}
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.login-form {
+
+    width: 100%;
+
+}
+
+
+.login-form > label {
+
+    display: block;
+
+    margin:
+        0 0 7px;
+
+    color: #454545;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* ======================================================
+   INPUT
+====================================================== */
+
+.input-box {
+
+    width: 100%;
+
+    height: 46px;
+
+    margin-bottom: 17px;
+
+    padding:
+        0 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #FAFAFA;
+
+    border:
+        1px solid var(--account-border);
+
+    border-radius: 11px;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.input-box:focus-within {
+
+    background: #FFFFFF;
+
+    border-color:
+        rgba(199,154,59,.7);
+
+    box-shadow:
+        0 0 0 3px rgba(199,154,59,.08);
+
+}
+
+
+.input-box > i {
+
+    width: 15px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #888;
+
+}
+
+
+.input-box input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    color: #222;
+
+}
+
+
+.input-box input::placeholder {
+
+    color: #A5A5A5;
+
+}
+
+
+/* ======================================================
+   MOSTRAR SENHA
+====================================================== */
+
+.show-password {
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 4px;
+
+    color: #999;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.show-password i {
+
+    font-size: 12px;
+
+}
+
+
+.show-password:hover {
+
+    color: #333;
+
+}
+
+
+/* ======================================================
+   OPÇÕES
+====================================================== */
+
+.login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin:
+        -2px 0 20px;
+
+}
+
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #888;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.remember input {
+
+    display: none;
+
+}
+
+
+.remember span {
+
+    width: 14px;
+
+    height: 14px;
+
+    border:
+        1px solid #D6D6D6;
+
+    border-radius: 4px;
+
+    background: #FFF;
+
+    position: relative;
+
+}
+
+
+.remember input:checked + span {
+
+    background:
+        var(--account-gold);
+
+    border-color:
+        var(--account-gold);
+
+}
+
+
+.remember input:checked + span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+
+    top: 1px;
+
+    width: 4px;
+
+    height: 8px;
+
+    border:
+        solid white;
+
+    border-width:
+        0 1.5px 1.5px 0;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.login-options > a {
+
+    color: #777;
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+
+}
+
+
+.login-options > a:hover {
+
+    color:
+        var(--account-gold);
+
+}
+
+
+/* ======================================================
+   BOTÃO LOGIN
+====================================================== */
+
+.login-button {
+
+    width: 100%;
+
+    height: 46px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #2A2A2A
+        );
+
+    color: #FFF;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.14);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.login-button i {
+
+    font-size: 9px;
+
+    transition: .25s ease;
+
+}
+
+
+.login-button:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 12px 27px rgba(0,0,0,.18);
+
+}
+
+
+.login-button:hover i {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* ======================================================
+   DIVISOR
+====================================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin:
+        24px 0 20px;
+
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        #EEEEEE;
+
+}
+
+
+.divider span {
+
+    color: #AAA;
+
+    font-size: 9px;
+
+}
+
+
+/* ======================================================
+   SOCIAL
+====================================================== */
+
+.social-login {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.social-login button {
+
+    width: 34px;
+
+    height: 34px;
+
+    border:
+        1px solid #E7E7E7;
+
+    border-radius: 9px;
+
+    background: #FFF;
+
+    color: #666;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+.social-login button i {
+
+    font-size: 12px;
+
+}
+
+
+.social-login button:hover {
+
+    border-color:
+        #CFCFCF;
+
+    color: #222;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ======================================================
+   CRIAR CONTA
+====================================================== */
+
+.create-account {
+
+    width: 100%;
+
+    height: 40px;
+
+    border:
+        1px solid #E5E5E5;
+
+    border-radius: 10px;
+
+    background: #FFF;
+
+    color: #444;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: .25s ease;
+
+}
+
+
+.create-account i {
+
+    font-size: 8px;
+
+    color: #999;
+
+    transition: .25s ease;
+
+}
+
+
+.create-account:hover {
+
+    border-color:
+        rgba(199,154,59,.55);
+
+    background:
+        #FFFDF8;
+
+}
+
+
+.create-account:hover i {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* ======================================================
+   MODAL
+====================================================== */
+
+.account-choice {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15,15,15,.38);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition: .25s ease;
+
+}
+
+
+.account-choice.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* ======================================================
+   CAIXA MODAL
+====================================================== */
+
+.choice-box {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    padding:
+        30px;
+
+    background: #FFF;
+
+    border-radius: 22px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.20);
+
+    transform:
+        translateY(0);
+
+}
+
+
+.account-choice.hidden .choice-box {
+
+    transform:
+        translateY(12px);
+
+}
+
+
+/* ======================================================
+   FECHAR
+====================================================== */
+
+.choice-close {
+
+    position: absolute;
+
+    top: 14px;
+
+    right: 14px;
+
+    width: 28px;
+
+    height: 28px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #F6F6F6;
+
+    color: #888;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.choice-close i {
+
+    font-size: 10px;
+
+}
+
+
+/* ======================================================
+   MARCA MODAL
+====================================================== */
+
+.choice-mark {
+
+    width: 38px;
+
+    height: 38px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #181818;
+
+    color:
+        var(--account-gold-light);
+
+}
+
+
+.choice-mark span {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+/* ======================================================
+   TEXTO MODAL
+====================================================== */
+
+.choice-box > h2 {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    letter-spacing: -.6px;
+
+}
+
+
+.choice-box > p {
+
+    margin:
+        5px 0 20px;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 10px;
+
+}
+
+
+/* ======================================================
+   OPÇÕES
+====================================================== */
+
+.choice-grid {
+
+    display: grid;
+
+    gap: 9px;
+
+}
+
+
+.choice-card {
+
+    min-height: 68px;
+
+    padding:
+        11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #222;
+
+    border:
+        1px solid #E8E8E8;
+
+    border-radius: 12px;
+
+    transition: .25s ease;
+
+}
+
+
+.choice-card:hover {
+
+    border-color:
+        rgba(199,154,59,.5);
+
+    background:
+        #FFFDF8;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.choice-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #F5F3EE;
+
+    color:
+        var(--account-gold);
+
+}
+
+
+.choice-icon i {
+
+    font-size: 11px;
+
+}
+
+
+.choice-card h3 {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.choice-card p {
+
+    margin: 2px 0 0;
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.choice-arrow {
+
+    margin-left: auto;
+
+    color: #BBB;
+
+    font-size: 8px;
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .account-page {
+
+        min-height:
+            calc(100vh - 60px);
+
+        padding:
+            25px 14px 90px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .login-box {
+
+        max-width: 390px;
+
+        padding:
+            29px 22px 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .login-mark {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .login-header {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .login-header h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .login-header p {
+
+        font-size: 10px;
+
+    }
+
+
+    .account-choice {
+
+        padding: 14px;
+
+    }
+
+
+    .choice-box {
+
+        padding:
+            27px 20px;
+
+        border-radius: 20px;
+
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE PEQUENO
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .login-box {
+
+        padding:
+            26px 17px 23px;
+
+    }
+
+
+    .login-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .login-options > a,
+    .remember {
+
+        font-size: 9px;
+
+    }
+
+}
+/* ======================================================
+   AV MARKET — REGISTRO
+   ESCOLHA DO TIPO DE CONTA
+====================================================== */
+
+
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+
+.register-body {
+
+    --register-gold: #C79A3B;
+    --register-gold-light: #E2BC6A;
+    --register-black: #181818;
+    --register-gray: #777;
+    --register-border: #E6E6E6;
+    --register-background: #F8F7F4;
+    --register-white: #FFFFFF;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% -15%,
+            rgba(199,154,59,.09),
+            transparent 43%
+        ),
+        var(--register-background);
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.register-header {
+
+    height: 62px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-bottom:
+        1px solid rgba(0,0,0,.06);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+}
+
+
+.register-header-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+.register-brand {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 3px;
+
+    text-decoration: none;
+
+    color:
+        var(--register-black);
+
+}
+
+
+.register-brand strong {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.register-brand span {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #666;
+
+}
+
+
+/* ======================================================
+   VOLTAR
+====================================================== */
+
+.register-back {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    color: #777;
+
+    font-size: 11px;
+
+    transition: .25s ease;
+
+}
+
+
+.register-back i {
+
+    font-size: 10px;
+
+}
+
+
+.register-back:hover {
+
+    color:
+        var(--register-black);
+
+}
+
+
+/* ======================================================
+   PÁGINA
+====================================================== */
+
+.register-page {
+
+    min-height:
+        calc(100vh - 62px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        50px 20px 70px;
+
+}
+
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+
+.register-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+/* ======================================================
+   CAIXA
+====================================================== */
+
+.register-box {
+
+    width: 100%;
+
+    max-width: 440px;
+
+    padding:
+        38px 40px 32px;
+
+    background:
+        var(--register-white);
+
+    border:
+        1px solid rgba(0,0,0,.055);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.075);
+
+}
+
+
+/* ======================================================
+   MARCA
+====================================================== */
+
+.register-mark {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin:
+        0 auto 19px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--register-black);
+
+    color:
+        var(--register-gold-light);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+}
+
+
+.register-mark span {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+/* ======================================================
+   TÍTULO
+====================================================== */
+
+.register-heading {
+
+    text-align: center;
+
+    margin-bottom: 27px;
+
+}
+
+
+.register-heading h1 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -1.2px;
+
+    color:
+        var(--register-black);
+
+}
+
+
+.register-heading p {
+
+    margin:
+        7px 0 0;
+
+    color: #8A8A8A;
+
+    font-size: 11px;
+
+}
+
+
+/* ======================================================
+   GRID
+====================================================== */
+
+.register-grid {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.register-card {
+
+    width: 100%;
+
+    min-height: 86px;
+
+    padding:
+        14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color:
+        var(--register-black);
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid #E7E7E7;
+
+    border-radius: 14px;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.register-card:hover {
+
+    border-color:
+        rgba(199,154,59,.55);
+
+    background:
+        #FFFDF8;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.06);
+
+}
+
+
+/* ======================================================
+   ÍCONE
+====================================================== */
+
+.register-card-icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #F5F3EE;
+
+    color:
+        var(--register-gold);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.register-card-icon i {
+
+    font-size: 13px;
+
+}
+
+
+.register-card:hover .register-card-icon {
+
+    background:
+        var(--register-gold);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+/* ======================================================
+   TEXTO
+====================================================== */
+
+.register-card-content {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.register-card-content h2 {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    letter-spacing: -.1px;
+
+}
+
+
+.register-card-content p {
+
+    margin: 0;
+
+    color: #999;
+
+    font-size: 9.5px;
+
+    line-height: 1.45;
+
+}
+
+
+/* ======================================================
+   SETA
+====================================================== */
+
+.register-card-arrow {
+
+    margin-left: auto;
+
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #BDBDBD;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+
+}
+
+
+.register-card-arrow i {
+
+    font-size: 8px;
+
+}
+
+
+.register-card:hover .register-card-arrow {
+
+    color:
+        var(--register-gold);
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.register-footer {
+
+    margin-top: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    text-align: center;
+
+}
+
+
+.register-footer span {
+
+    width: 20px;
+
+    height: 20px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #F5F3EE;
+
+    color:
+        var(--register-gold);
+
+}
+
+
+.register-footer span i {
+
+    font-size: 8px;
+
+}
+
+
+.register-footer p {
+
+    margin: 0;
+
+    color: #999;
+
+    font-size: 8.5px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .register-header {
+
+        height: 56px;
+
+    }
+
+
+    .register-header-container {
+
+        padding:
+            0 15px;
+
+    }
+
+
+    .register-brand strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .register-brand span {
+
+        font-size: 13px;
+
+    }
+
+
+    .register-back span {
+
+        display: none;
+
+    }
+
+
+    .register-back i {
+
+        font-size: 13px;
+
+    }
+
+
+    .register-page {
+
+        min-height:
+            calc(100vh - 56px);
+
+        padding:
+            28px 14px 70px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .register-box {
+
+        max-width: 390px;
+
+        padding:
+            29px 22px 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .register-mark {
+
+        width: 38px;
+
+        height: 38px;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .register-heading {
+
+        margin-bottom: 24px;
+
+    }
+
+
+    .register-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .register-heading p {
+
+        font-size: 10px;
+
+    }
+
+
+    .register-card {
+
+        min-height: 78px;
+
+        padding: 12px;
+
+    }
+
+
+    .register-card-icon {
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
+
+    .register-card-content h2 {
+
+        font-size: 11px;
+
+    }
+
+
+    .register-card-content p {
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE PEQUENO
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .register-box {
+
+        padding:
+            26px 17px 23px;
+
+    }
+
+
+    .register-heading h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .register-card {
+
+        min-height: 74px;
+
+        gap: 9px;
+
+    }
+
+
+    .register-card-icon {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
+
+    .register-card-content p {
+
+        font-size: 8.5px;
+
+    }
+
+}
+
+/* ======================================================
+   AV MARKET — COMPRADOR
+   CRIAÇÃO DE CONTA
+====================================================== */
+
+
+/* ======================================================
+   VARIÁVEIS
+====================================================== */
+
+.buyer-body {
+
+    --buyer-gold: #C79A3B;
+    --buyer-gold-light: #E2BC6A;
+    --buyer-black: #181818;
+    --buyer-gray: #858585;
+    --buyer-border: #E7E7E7;
+    --buyer-background: #F8F7F4;
+    --buyer-white: #FFFFFF;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% -15%,
+            rgba(199,154,59,.09),
+            transparent 43%
+        ),
+        var(--buyer-background);
+
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.buyer-header {
+
+    height: 62px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    border-bottom:
+        1px solid rgba(0,0,0,.06);
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+}
+
+
+.buyer-header-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding:
+        0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ======================================================
+   MARCA
+====================================================== */
+
+.buyer-brand {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 3px;
+
+    text-decoration: none;
+
+    color:
+        var(--buyer-black);
+
+}
+
+
+.buyer-brand strong {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.buyer-brand span {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #666;
+
+}
+
+
+/* ======================================================
+   VOLTAR
+====================================================== */
+
+.buyer-back {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: .25s ease;
+
+}
+
+
+.buyer-back i {
+
+    font-size: 10px;
+
+}
+
+
+.buyer-back:hover {
+
+    color:
+        var(--buyer-black);
+
+}
+
+
+/* ======================================================
+   PÁGINA
+====================================================== */
+
+.buyer-page {
+
+    min-height:
+        calc(100vh - 62px);
+
+    padding:
+        42px 20px 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.buyer-section {
+
+    width: 100%;
+
+}
+
+
+.buyer-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+/* ======================================================
+   CARD PRINCIPAL
+====================================================== */
+
+.buyer-card {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    padding:
+        34px 40px 29px;
+
+    background:
+        var(--buyer-white);
+
+    border:
+        1px solid rgba(0,0,0,.055);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.075);
+
+}
+
+
+/* ======================================================
+   MARCA
+====================================================== */
+
+.buyer-mark {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        var(--buyer-black);
+
+    color:
+        var(--buyer-gold-light);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.13);
+
+}
+
+
+.buyer-mark span {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+.buyer-heading {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.buyer-profile-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    margin:
+        0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        #F5F2EA;
+
+    color:
+        var(--buyer-gold);
+
+}
+
+
+.buyer-profile-icon i {
+
+    font-size: 11px;
+
+}
+
+
+.buyer-heading h1 {
+
+    margin: 0;
+
+    color:
+        var(--buyer-black);
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+}
+
+
+.buyer-heading p {
+
+    margin:
+        6px 0 0;
+
+    color:
+        #999;
+
+    font-size: 10.5px;
+
+}
+
+
+/* ======================================================
+   FORMULÁRIO
+====================================================== */
+
+.buyer-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+/* ======================================================
+   CAMPOS
+====================================================== */
+
+.buyer-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.buyer-field label {
+
+    color:
+        #444;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.buyer-input {
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        0 13px;
+
+    border:
+        1px solid var(--buyer-border);
+
+    border-radius: 12px;
+
+    background:
+        #FCFCFC;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.buyer-input:focus-within {
+
+    background:
+        #FFFFFF;
+
+    border-color:
+        rgba(199,154,59,.65);
+
+    box-shadow:
+        0 0 0 3px rgba(199,154,59,.08);
+
+}
+
+
+.buyer-input > i {
+
+    width: 15px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color:
+        #A5A5A5;
+
+    font-size: 11px;
+
+}
+
+
+.buyer-input input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color:
+        var(--buyer-black);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+}
+
+
+.buyer-input input::placeholder {
+
+    color:
+        #B5B5B5;
+
+}
+
+
+/* ======================================================
+   BOTÃO PASSWORD
+====================================================== */
+
+.buyer-password-toggle {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #A5A5A5;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.buyer-password-toggle i {
+
+    font-size: 11px;
+
+}
+
+
+/* ======================================================
+   TERMOS
+====================================================== */
+
+.buyer-terms {
+
+    margin-top: 2px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.buyer-terms input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.buyer-check {
+
+    width: 14px;
+
+    height: 14px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid #D3D3D3;
+
+    border-radius: 4px;
+
+    background: #FFFFFF;
+
+    position: relative;
+
+    transition: .2s ease;
+
+}
+
+
+.buyer-terms input:checked + .buyer-check {
+
+    background:
+        var(--buyer-gold);
+
+    border-color:
+        var(--buyer-gold);
+
+}
+
+
+.buyer-terms input:checked + .buyer-check::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+
+    top: 1px;
+
+    width: 4px;
+
+    height: 8px;
+
+    border:
+        solid #FFFFFF;
+
+    border-width:
+        0 1.5px 1.5px 0;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.buyer-terms-text {
+
+    color: #888;
+
+    font-size: 8.5px;
+
+    line-height: 1.4;
+
+}
+
+
+/* ======================================================
+   BOTÃO CRIAR
+====================================================== */
+
+.buyer-submit {
+
+    width: 100%;
+
+    height: 51px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #292929
+        );
+
+    color:
+        #FFFFFF;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+box-shadow:
+        0 12px 28px rgba(0,0,0,.14);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.buyer-submit i {
+
+    font-size: 10px;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.buyer-submit:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.18);
+
+}
+
+
+.buyer-submit:hover i {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* ======================================================
+   SEGURANÇA
+====================================================== */
+
+.buyer-security {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #999;
+
+}
+
+
+.buyer-security i {
+
+    color:
+        var(--buyer-gold);
+
+    font-size: 9px;
+
+}
+
+
+.buyer-security span {
+
+    font-size: 8.5px;
+
+}
+
+
+/* ======================================================
+   LOGIN
+====================================================== */
+
+.buyer-login {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 9px;
+
+}
+
+
+.buyer-login span {
+
+    color: #999;
+
+}
+
+
+.buyer-login a {
+
+    color:
+        var(--buyer-black);
+
+    font-weight: 650;
+
+    text-decoration: none;
+
+}
+
+
+.buyer-login a:hover {
+
+    color:
+        var(--buyer-gold);
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .buyer-header {
+
+        height: 56px;
+
+    }
+
+
+    .buyer-header-container {
+
+        padding:
+            0 15px;
+
+    }
+
+
+    .buyer-brand strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .buyer-brand span {
+
+        font-size: 13px;
+
+    }
+
+
+    .buyer-back span {
+
+        display: none;
+
+    }
+
+
+    .buyer-back i {
+
+        font-size: 13px;
+
+    }
+
+
+    .buyer-page {
+
+        min-height:
+            calc(100vh - 56px);
+
+        padding:
+            25px 14px 60px;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .buyer-card {
+
+        max-width: 390px;
+
+        padding:
+            27px 21px 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .buyer-mark {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .buyer-heading h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .buyer-input {
+
+        height: 45px;
+
+    }
+
+
+}
+
+
+/* ======================================================
+   MOBILE PEQUENO
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .buyer-card {
+
+        padding:
+            24px 17px 22px;
+
+    }
+
+
+    .buyer-heading h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .buyer-input {
+
+        height: 44px;
+
+    }
+
+}
+
+/*========================================================
+MENU PRINCIPAL DO HEADER
+========================================================*/
+
+.header-menu-button{
+
+width:38px;
+
+height:38px;
+
+border-radius:50%;
+
+border:1px solid rgba(199,154,59,.35);
+
+background:#151515;
+
+color:#C79A3B;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+cursor:pointer;
+
+font-size:1rem;
+
+flex-shrink:0;
+
+transition:
+background .25s ease,
+border-color .25s ease,
+transform .25s ease;
+
+}
+
+.header-menu-button:hover{
+
+background:#1d1d1d;
+
+border-color:rgba(199,154,59,.7);
+
+transform:translateY(-1px);
+
+}
+
+
+/*========================================================
+OVERLAY
+========================================================*/
+
+.header-menu-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.62);
+
+backdrop-filter:blur(3px);
+
+-webkit-backdrop-filter:blur(3px);
+
+opacity:0;
+
+visibility:hidden;
+
+pointer-events:none;
+
+z-index:9998;
+
+transition:
+opacity .25s ease,
+visibility .25s ease;
+
+}
+
+.header-menu-overlay.active{
+
+opacity:1;
+
+visibility:visible;
+
+pointer-events:auto;
+
+}
+
+
+/*========================================================
+MENU
+========================================================*/
+
+.header-menu{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+width:320px;
+
+max-width:88vw;
+
+height:100vh;
+
+background:#0c0c0c;
+
+border-left:1px solid rgba(199,154,59,.18);
+
+box-shadow:-15px 0 45px rgba(0,0,0,.45);
+
+z-index:9999;
+
+display:flex;
+
+flex-direction:column;
+
+transform:translateX(105%);
+
+transition:
+transform .3s cubic-bezier(.4,0,.2,1);
+
+overflow:hidden;
+
+}
+
+.header-menu.active{
+
+transform:translateX(0);
+
+}
+
+
+/*========================================================
+TOPO
+========================================================*/
+
+.header-menu-top{
+
+height:75px;
+
+padding:0 20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+border-bottom:1px solid rgba(255,255,255,.07);
+
+flex-shrink:0;
+
+}
+
+.header-menu-brand{
+
+display:flex;
+
+align-items:center;
+
+gap:11px;
+
+}
+
+.header-menu-av{
+
+font-size:1.25rem;
+
+font-weight:800;
+
+color:#C79A3B;
+
+letter-spacing:-.05em;
+
+}
+
+.header-menu-brand div{
+
+display:flex;
+
+flex-direction:column;
+
+gap:1px;
+
+}
+
+.header-menu-brand strong{
+
+font-size:.88rem;
+
+color:#ffffff;
+
+font-weight:600;
+
+}
+
+.header-menu-brand span{
+
+font-size:.62rem;
+
+color:#777777;
+
+}
+
+.header-menu-close{
+
+width:34px;
+
+height:34px;
+
+border-radius:50%;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:#151515;
+
+color:#aaaaaa;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+cursor:pointer;
+
+font-size:.9rem;
+
+transition:
+background .2s ease,
+color .2s ease,
+border-color .2s ease;
+
+}
+
+.header-menu-close:hover{
+
+background:#1d1d1d;
+
+color:#C79A3B;
+
+border-color:rgba(199,154,59,.35);
+
+}
+
+
+/*========================================================
+CONTEÚDO
+========================================================*/
+
+.header-menu-content{
+
+flex:1;
+
+overflow-y:auto;
+
+padding:12px 12px 18px;
+
+scrollbar-width:thin;
+
+scrollbar-color:#333 transparent;
+
+}
+
+.header-menu-content::-webkit-scrollbar{
+
+width:4px;
+
+}
+
+.header-menu-content::-webkit-scrollbar-thumb{
+
+background:#333;
+
+border-radius:10px;
+
+}
+
+
+/*========================================================
+ITEMS
+========================================================*/
+
+.header-menu-item{
+
+min-height:46px;
+
+display:flex;
+
+align-items:center;
+
+gap:13px;
+
+padding:0 13px;
+
+margin-bottom:3px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+color:#b5b5b5;
+
+font-size:.76rem;
+
+font-weight:500;
+
+transition:
+background .2s ease,
+color .2s ease,
+padding-left .2s ease;
+
+}
+
+.header-menu-item i{
+
+width:20px;
+
+text-align:center;
+
+font-size:.85rem;
+
+color:#858585;
+
+transition:color .2s ease;
+
+}
+
+.header-menu-item:hover{
+
+background:rgba(199,154,59,.09);
+
+color:#ffffff;
+
+padding-left:17px;
+
+}
+
+.header-menu-item:hover i{
+
+color:#C79A3B;
+
+}
+
+
+/*========================================================
+RODAPÉ DO MENU
+========================================================*/
+
+.header-menu-bottom{
+
+padding:12px;
+
+border-top:1px solid rgba(255,255,255,.07);
+
+flex-shrink:0;
+
+}
+
+.header-menu-logout{
+
+height:46px;
+
+display:flex;
+
+align-items:center;
+
+gap:13px;
+
+padding:0 13px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+color:#b5b5b5;
+
+font-size:.76rem;
+
+font-weight:500;
+
+transition:
+background .2s ease,
+color .2s ease;
+
+}
+
+.header-menu-logout i{
+
+width:20px;
+
+text-align:center;
+
+font-size:.85rem;
+
+}
+
+.header-menu-logout:hover{
+
+background:rgba(255,70,70,.08);
+
+color:#ff7777;
+
+}
+
+
+/*========================================================
+MOBILE
+========================================================*/
+
+@media(max-width:600px){
+
+.header-menu-button{
+
+width:35px;
+
+height:35px;
+
+font-size:.9rem;
+
+}
+
+.header-menu{
+
+width:300px;
+
+max-width:86vw;
+
+}
+
+.header-menu-top{
+
+height:68px;
+
+}
+
+.header-menu-item{
+
+min-height:44px;
+
+font-size:.73rem;
+
+}
+
+}
+
+
+/*========================================================
+TELAS MUITO PEQUENAS
+========================================================*/
+
+@media(max-width:380px){
+
+.header-menu{
+
+width:285px;
+
+}
+
+.header-menu-item{
+
+min-height:42px;
+
+}
+
+}
+/*======================================================
+  DESTAQUE — MARKETPLACE PREMIUM DE ANGOLA
+======================================================*/
+
+.intro-badge{
+    font-size:0.82rem !important;
+    font-weight:600 !important;
+    letter-spacing:0.10em !important;
+    padding:8px 13px !important;
+    display:inline-block !important;
+}
+/*======================================================
+  COR DO LOGO AV — CABEÇALHO
+======================================================*/
+
+.logo-av{
+    color:#C79A3B !important;
+}
+
+/* ======================================================
+   AV MARKET — NAVEGAÇÃO DA PÁGINA PRINCIPAL
+====================================================== */
+
+.main-mobile-navigation{
+
+position:fixed;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+height:70px;
+
+z-index:99999;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-around;
+
+background:#080808;
+
+border-top:1px solid rgba(199,154,59,.15);
+
+backdrop-filter:blur(14px);
+
+-webkit-backdrop-filter:blur(14px);
+
+box-shadow:0 -8px 30px rgba(0,0,0,.30);
+
+}
+
+
+.main-mobile-navigation a{
+
+position:relative;
+
+width:20%;
+
+height:70px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:4px;
+
+text-decoration:none;
+
+color:#777;
+
+font-family:"Poppins",sans-serif;
+
+font-size:.52rem;
+
+font-weight:500;
+
+transition:.25s ease;
+
+}
+
+
+.main-mobile-navigation a i{
+
+font-size:1rem;
+
+color:#777;
+
+transition:.25s ease;
+
+}
+
+
+.main-mobile-navigation a:hover{
+
+color:#fff;
+
+}
+
+
+.main-mobile-navigation a:hover i{
+
+color:#C79A3B;
+
+transform:translateY(-2px);
+
+}
+
+
+.main-mobile-navigation a.active{
+
+color:#C79A3B;
+
+font-weight:600;
+
+}
+
+
+.main-mobile-navigation a.active i{
+
+color:#C79A3B;
+
+}
+
+
+.main-mobile-navigation a.active::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:50%;
+
+width:25px;
+
+height:2px;
+
+transform:translateX(-50%);
+
+background:#C79A3B;
+
+border-radius:0 0 4px 4px;
+
+}
+
+
+@media(max-width:600px){
+
+.main-mobile-navigation{
+
+height:70px;
+
+}
+
+
+.main-mobile-navigation a{
+
+height:70px;
+
+font-size:.49rem;
+
+}
+
+
+.main-mobile-navigation a i{
+
+font-size:.95rem;
+
+}
+
+}
+
+
+@media(max-width:380px){
+
+.main-mobile-navigation a{
+
+font-size:.44rem;
+
+}
+
+
+.main-mobile-navigation a i{
+
+font-size:.88rem;
+
+}
+
+}
+
+
