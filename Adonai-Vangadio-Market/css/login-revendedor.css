@@ -1,0 +1,630 @@
+/* ======================================================
+   CSS/VENDEDOR.CSS
+   AV MARKET — CRIAÇÃO DE CONTA REVENDEDOR
+   VERSÃO EXECUTIVA PREMIUM
+====================================================== */
+
+
+
+/* ======================================================
+   BODY
+====================================================== */
+
+.seller-body{
+
+    min-height:100vh;
+    background:
+    linear-gradient(
+        135deg,
+        #f8f6f1,
+        #ffffff
+    );
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+
+.seller-header{
+
+    background:#ffffff;
+
+    border-bottom:
+    1px solid rgba(0,0,0,.06);
+
+}
+
+
+
+.seller-header-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:20px 0;
+
+}
+
+
+
+.seller-brand{
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1b1b1b;
+
+}
+
+
+
+.seller-brand strong{
+
+    color:#C79A3B;
+
+}
+
+
+
+.seller-brand span{
+
+    font-weight:500;
+
+}
+
+
+
+.seller-back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:#555;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.seller-back:hover{
+
+    color:#C79A3B;
+
+}
+
+
+
+
+
+
+/* ======================================================
+   PAGE
+====================================================== */
+
+
+.seller-page{
+
+    width:100%;
+
+    padding:50px 20px;
+
+}
+
+
+
+.seller-section{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.seller-container{
+
+    width:100%;
+
+    max-width:520px;
+
+}
+
+
+
+
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+
+.seller-card{
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:45px 40px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+/* ======================================================
+   LOGO
+====================================================== */
+
+
+.seller-mark{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#C79A3B;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 25px;
+
+}
+
+
+
+.seller-mark span{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+
+/* ======================================================
+   HEADER CONTENT
+====================================================== */
+
+
+.seller-heading{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.seller-profile-icon{
+
+    width:45px;
+
+    height:45px;
+
+    margin:auto;
+
+    margin-bottom:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#f4ead6;
+
+    color:#C79A3B;
+
+}
+
+
+
+.seller-heading h1{
+
+    font-size:32px;
+
+    color:#1b1b1b;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.seller-heading p{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+
+.seller-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.seller-field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#333;
+
+}
+
+
+
+.seller-input{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+.seller-input i{
+
+    position:absolute;
+
+    left:16px;
+
+    color:#C79A3B;
+
+    font-size:14px;
+
+}
+
+
+
+.seller-input input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:
+
+    0 45px;
+
+    border-radius:14px;
+
+    border:
+
+    1px solid #e6e6e6;
+
+    outline:none;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.seller-input input:focus{
+
+    border-color:#C79A3B;
+
+    box-shadow:
+
+    0 0 0 3px rgba(199,154,59,.12);
+
+}
+
+
+
+
+
+/* ======================================================
+   PASSWORD BUTTON
+====================================================== */
+
+
+.seller-password-toggle{
+
+    position:absolute;
+
+    right:15px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    color:#777;
+
+}
+
+
+
+.seller-password-toggle i{
+
+    position:static;
+
+    color:#777;
+
+}
+
+
+
+
+
+
+/* ======================================================
+   TERMS
+====================================================== */
+
+
+.seller-terms{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:13px;
+
+    color:#666;
+
+    margin-top:10px;
+
+}
+
+
+
+.seller-terms input{
+
+    accent-color:#C79A3B;
+
+}
+
+
+
+
+
+
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+
+.seller-submit{
+
+    margin-top:15px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #C79A3B,
+        #E2BC6A
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.seller-submit:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 12px 25px rgba(199,154,59,.25);
+
+}
+
+
+
+
+
+/* ======================================================
+   SECURITY
+====================================================== */
+
+
+.seller-security{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+
+
+.seller-security i{
+
+    color:#C79A3B;
+
+}
+
+
+
+
+
+
+/* ======================================================
+   LOGIN LINK
+====================================================== */
+
+
+.seller-login{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+
+
+.seller-login a{
+
+    margin-left:5px;
+
+    color:#C79A3B;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+
+@media(max-width:600px){
+
+
+.seller-card{
+
+    padding:35px 22px;
+
+}
+
+
+
+.seller-heading h1{
+
+    font-size:27px;
+
+}
+
+
+
+.seller-page{
+
+    padding:30px 15px;
+
+}
+
+
+}
