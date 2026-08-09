@@ -1,0 +1,979 @@
+<!-- ======================================================
+     PAGES/VENDEDOR.HTML
+     AV MARKET — ÁREA DO REVENDEDOR
+====================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Área do Revendedor | AV Market</title>
+
+
+<!-- CSS GLOBAL -->
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="../css/header.css">
+
+<link rel="stylesheet" href="../css/responsive.css">
+
+<link rel="stylesheet" href="../css/cards.css">
+
+
+<!-- CSS ESPECÍFICO -->
+
+<link rel="stylesheet" href="../css/vendedor.css">
+
+
+<!-- FONT AWESOME -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
+
+</head>
+
+
+<body class="seller-body">
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="market-header seller-header">
+
+<div class="container seller-header-container">
+
+
+    <!-- LOGO -->
+
+    <a
+        href="../index.html"
+        class="seller-brand"
+    >
+
+        <strong>AV</strong>
+
+        <span>Market</span>
+
+    </a>
+
+
+
+    <!-- PESQUISA -->
+
+    <div class="seller-search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="search"
+            placeholder="Pesquisar no painel..."
+        >
+
+    </div>
+
+
+
+    <!-- AÇÕES -->
+
+    <div class="seller-header-actions">
+
+
+        <button
+            type="button"
+            aria-label="Notificações"
+        >
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+
+
+        <button
+            type="button"
+            aria-label="Mensagens"
+        >
+
+            <i class="fa-regular fa-message"></i>
+
+        </button>
+
+
+
+        <button
+            type="button"
+            class="seller-profile-button"
+            id="profileButton"
+        >
+
+            <span class="seller-avatar">
+
+                <i class="fa-regular fa-user"></i>
+
+            </span>
+
+
+            <span class="seller-profile-name">
+
+                Revendedor
+
+            </span>
+
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- ======================================================
+     LAYOUT
+====================================================== -->
+
+<div class="seller-layout">
+
+
+<!-- ======================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="seller-sidebar" id="sellerSidebar">
+
+
+    <div class="seller-sidebar-brand">
+
+        <span class="seller-sidebar-mark">
+
+            AV
+
+        </span>
+
+
+        <div>
+
+            <strong>
+
+                Área do Revendedor
+
+            </strong>
+
+
+            <span>
+
+                AV Market
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MENU -->
+
+    <nav class="seller-menu">
+
+
+        <a
+            href="#dashboard"
+            class="active"
+        >
+
+            <i class="fa-solid fa-grid-2"></i>
+
+            <span>
+
+                Visão geral
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#produtos">
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>
+
+                Meus produtos
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#adicionar">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <span>
+
+                Adicionar produto
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#vendas">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+
+                Vendas
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#pedidos">
+
+            <i class="fa-solid fa-receipt"></i>
+
+            <span>
+
+                Pedidos
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#pagamentos">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <span>
+
+                Pagamentos
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#mensagens">
+
+            <i class="fa-regular fa-message"></i>
+
+            <span>
+
+                Mensagens
+
+            </span>
+
+        </a>
+
+
+
+        <a href="#definicoes">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+
+                Definições
+
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SAIR -->
+
+    <div class="seller-sidebar-bottom">
+
+
+        <a
+            href="minha-conta.html"
+            class="seller-logout"
+        >
+
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+            <span>
+
+                Sair
+
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- ======================================================
+     CONTEÚDO PRINCIPAL
+====================================================== -->
+
+<main class="seller-main" id="dashboard">
+
+
+    <!-- MOBILE HEADER -->
+
+    <div class="seller-mobile-top">
+
+        <button
+            type="button"
+            id="sellerMenuButton"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+        <strong>
+
+            AV Market
+
+        </strong>
+
+
+        <span class="seller-mobile-avatar">
+
+            <i class="fa-regular fa-user"></i>
+
+        </span>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CABEÇALHO DA PÁGINA
+    ================================================== -->
+
+    <section class="seller-welcome">
+
+
+        <div>
+
+            <span class="seller-eyebrow">
+
+                PAINEL DO REVENDEDOR
+
+            </span>
+
+
+            <h1>
+
+                Olá, Revendedor.
+
+            </h1>
+
+
+            <p>
+
+                Gerencie os seus produtos, vendas e pedidos.
+
+            </p>
+
+        </div>
+
+
+
+        <a
+            href="#adicionar"
+            class="seller-primary-button"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Adicionar produto
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ESTATÍSTICAS
+    ================================================== -->
+
+    <section class="seller-stats">
+
+
+        <div class="seller-stat-card">
+
+            <div class="seller-stat-icon">
+
+                <i class="fa-solid fa-box"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Produtos
+
+                </span>
+
+
+                <strong>
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="seller-stat-card">
+
+            <div class="seller-stat-icon">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Vendas
+
+                </span>
+
+
+                <strong>
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="seller-stat-card">
+
+            <div class="seller-stat-icon">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Receita
+
+                </span>
+
+
+                <strong>
+
+                    0 Kz
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="seller-stat-card">
+
+            <div class="seller-stat-icon">
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Disponível
+
+                </span>
+
+
+                <strong>
+
+                    0 Kz
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PRODUTOS
+    ================================================== -->
+
+    <section
+        class="seller-panel"
+        id="produtos"
+    >
+
+
+        <div class="seller-panel-header">
+
+            <div>
+
+                <span class="seller-panel-label">
+
+                    CATÁLOGO
+
+                </span>
+
+
+                <h2>
+
+                    Meus produtos
+
+                </h2>
+
+            </div>
+
+
+            <a href="#adicionar">
+
+                Ver produtos
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="seller-empty">
+
+
+            <div class="seller-empty-icon">
+
+                <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+
+            <h3>
+
+                Ainda não possui produtos
+
+            </h3>
+
+
+            <p>
+
+                Adicione o seu primeiro produto
+                para começar a vender.
+
+            </p>
+
+
+            <a
+                href="#adicionar"
+                class="seller-secondary-button"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Adicionar produto
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ADICIONAR PRODUTO
+    ================================================== -->
+
+    <section
+        class="seller-panel seller-add-panel"
+        id="adicionar"
+    >
+
+
+        <div class="seller-panel-header">
+
+            <div>
+
+                <span class="seller-panel-label">
+
+                    NOVO PRODUTO
+
+                </span>
+
+
+                <h2>
+
+                    Adicionar produto
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <form
+            class="seller-product-form"
+            id="productForm"
+        >
+
+
+            <div class="seller-form-group">
+
+                <label for="productName">
+
+                    Nome do produto
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Ex.: Smartphone"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="seller-form-row">
+
+
+                <div class="seller-form-group">
+
+                    <label for="productPrice">
+
+                        Preço
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="productPrice"
+                        placeholder="0"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="seller-form-group">
+
+                    <label for="productCategory">
+
+                        Categoria
+
+                    </label>
+
+
+                    <select id="productCategory" required>
+
+                        <option value="">
+
+                            Selecionar
+
+                        </option>
+
+                        <option>
+
+                            Eletrónicos
+
+                        </option>
+
+                        <option>
+
+                            Moda
+
+                        </option>
+
+                        <option>
+
+                            Casa
+
+                        </option>
+
+                        <option>
+
+                            Beleza
+
+                        </option>
+
+                        <option>
+
+                            Outros
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="seller-form-group">
+
+                <label for="productDescription">
+
+                    Descrição
+
+                </label>
+
+
+                <textarea
+                    id="productDescription"
+                    rows="4"
+                    placeholder="Descreva o produto..."
+                ></textarea>
+
+            </div>
+
+
+
+            <div class="seller-form-group">
+
+                <label>
+
+                    Fotografia do produto
+
+                </label>
+
+
+                <label
+                    class="seller-upload"
+                    for="productImage"
+                >
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+
+                    <span>
+
+                        Selecionar fotografia
+
+                    </span>
+
+
+                    <small>
+
+                        JPG, PNG ou WEBP
+
+                    </small>
+
+
+                    <input
+                        type="file"
+                        id="productImage"
+                        accept="image/*"
+                    >
+
+                </label>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="seller-primary-button"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Publicar produto
+
+            </button>
+
+
+        </form>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         INFORMAÇÃO COMERCIAL
+    ================================================== -->
+
+    <section class="seller-commercial">
+
+
+        <div class="seller-commercial-icon">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+
+                MODELO COMERCIAL
+
+            </span>
+
+
+            <h3>
+
+                Venda através da AV Market
+
+            </h3>
+
+
+            <p>
+
+                Nas vendas realizadas através da plataforma,
+                20% correspondem à comissão da AV Market
+                e 80% são destinados ao revendedor.
+
+            </p>
+
+        </div>
+
+
+        <div class="seller-commercial-values">
+
+            <strong>
+
+                20%
+
+            </strong>
+
+            <span>
+
+                AV Market
+
+            </span>
+
+
+            <strong>
+
+                80%
+
+            </strong>
+
+            <span>
+
+                Revendedor
+
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+</div>
+
+
+
+<!-- ======================================================
+     NOTIFICAÇÃO
+====================================================== -->
+
+<div
+    class="seller-toast"
+    id="sellerToast"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+
+        Produto preparado com sucesso.
+
+    </span>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../js/script.js"></script>
+
+<script src="../js/vendedor.js"></script>
+
+
+</body>
+
+</html>
