@@ -1,0 +1,717 @@
+<!-- ======================================================
+     PAGES/MINHA-CONTA.HTML
+     AV MARKET — MINHA CONTA
+     VERSÃO EXECUTIVA PREMIUM
+====================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="pt-AO">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Minha Conta | Adonai Vangadio Market</title>
+
+
+<!-- CSS EXISTENTES -->
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="../css/header.css">
+
+<link rel="stylesheet" href="../css/responsive.css">
+
+<link rel="stylesheet" href="../css/cards.css">
+
+
+<!-- CSS ESPECÍFICO DA CONTA -->
+
+<link rel="stylesheet" href="../css/minha-conta.css">
+
+
+<!-- FONT AWESOME -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
+
+</head>
+
+
+<body class="account-body">
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="market-header">
+
+<div class="container header-wrapper">
+
+
+    <!-- MARCA -->
+
+    <div class="market-brand">
+
+        <a href="../index.html">
+
+            AV <span>Market</span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PESQUISA -->
+
+    <div class="header-search">
+
+
+        <button
+            class="search-icon"
+            type="button"
+            aria-label="Pesquisar"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+
+
+        <div class="search-filter">
+
+
+            <select>
+
+                <option>Todos</option>
+
+                <option>Produtos</option>
+
+                <option>Categorias</option>
+
+                <option>Vendedores</option>
+
+            </select>
+
+
+
+            <input
+                type="text"
+                placeholder="Pesquisar..."
+            >
+
+
+
+            <button
+                class="camera-search"
+                type="button"
+                aria-label="Pesquisar por fotografia"
+            >
+
+                <i class="fa-solid fa-camera"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- MENU -->
+
+    <button
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu"
+    >
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+
+</div>
+
+</header>
+
+
+
+<!-- ======================================================
+     MENU LATERAL
+====================================================== -->
+
+<div class="side-menu">
+
+
+    <div class="side-menu-header">
+
+        <h3>
+
+            AV Market
+
+        </h3>
+
+
+        <button
+            class="close-menu"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <nav>
+
+
+        <a href="../index.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Início</span>
+
+        </a>
+
+
+
+        <a href="categorias.html">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <span>Categorias</span>
+
+        </a>
+
+
+
+        <a href="pedidos.html">
+
+            <i class="fa-solid fa-box"></i>
+
+            <span>Pedidos</span>
+
+        </a>
+
+
+
+        <a href="favoritos.html">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <span>Favoritos</span>
+
+        </a>
+
+
+
+        <a href="mensagens.html">
+
+            <i class="fa-solid fa-message"></i>
+
+            <span>Mensagens</span>
+
+        </a>
+
+
+    </nav>
+
+
+</div>
+
+
+
+<div class="menu-overlay"></div>
+
+
+
+<!-- ======================================================
+     MINHA CONTA
+====================================================== -->
+
+<main class="account-page">
+
+
+<section class="login-container">
+
+
+<div class="login-box">
+
+
+    <!-- ==================================================
+         MARCA
+    ================================================== -->
+
+    <div class="login-mark">
+
+        <span>AV</span>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CABEÇALHO
+    ================================================== -->
+
+    <div class="login-header">
+
+        <h1>
+
+            Bem-vindo!
+
+        </h1>
+
+
+        <p>
+
+            Adonai Vangadio Market
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         FORMULÁRIO
+    ================================================== -->
+
+    <form class="login-form">
+
+
+        <!-- EMAIL -->
+
+        <label>
+
+            Email
+
+        </label>
+
+
+        <div class="input-box">
+
+            <i class="fa-regular fa-envelope"></i>
+
+
+            <input
+                type="email"
+                placeholder="seuemail@exemplo.com"
+                autocomplete="email"
+            >
+
+        </div>
+
+
+
+        <!-- SENHA -->
+
+        <label>
+
+            Palavra-passe
+
+        </label>
+
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-lock"></i>
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+            >
+
+
+            <button
+                type="button"
+                class="show-password"
+                id="showPassword"
+                aria-label="Mostrar palavra-passe"
+            >
+
+                <i class="fa-regular fa-eye"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- OPÇÕES -->
+
+        <div class="login-options">
+
+
+            <label class="remember">
+
+                <input
+                    type="checkbox"
+                >
+
+                <span></span>
+
+                Lembrar-me
+
+            </label>
+
+
+
+            <a href="recuperar-senha.html">
+
+                Esqueceu a senha?
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ENTRAR -->
+
+        <button
+            class="login-button"
+            type="submit"
+        >
+
+            <span>Entrar</span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+
+        <!-- DIVISOR -->
+
+        <div class="divider">
+
+            <span>
+
+                ou
+
+            </span>
+
+        </div>
+
+
+
+        <!-- LOGIN SOCIAL -->
+
+        <div class="social-login">
+
+
+            <button
+                type="button"
+                aria-label="Entrar com Google"
+            >
+
+                <i class="fa-brands fa-google"></i>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                aria-label="Entrar com Facebook"
+            >
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                aria-label="Entrar com Apple"
+            >
+
+                <i class="fa-brands fa-apple"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- CRIAR CONTA -->
+
+        <button
+            type="button"
+            class="create-account"
+            id="openAccountChoice"
+        >
+
+            <span>Criar uma nova conta</span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     MODAL TIPO DE CONTA
+====================================================== -->
+
+<section class="account-choice hidden">
+
+
+<div class="choice-box">
+
+
+    <button
+        class="choice-close"
+        type="button"
+        aria-label="Fechar"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+
+    <div class="choice-mark">
+
+        <span>AV</span>
+
+    </div>
+
+
+
+    <h2>
+
+        Criar conta
+
+    </h2>
+
+
+    <p>
+
+        Escolha o seu perfil.
+
+    </p>
+
+
+
+    <div class="choice-grid">
+
+
+        <!-- ==================================================
+             COMPRADOR
+             ↓
+             REGISTRO
+        ================================================== -->
+
+        <a
+            href="registro.html?tipo=comprador"
+            class="choice-card"
+        >
+
+            <div class="choice-icon">
+
+                <i class="fa-regular fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Comprador
+
+                </h3>
+
+
+                <p>
+
+                    Comprar e acompanhar pedidos.
+
+                </p>
+
+            </div>
+
+
+            <i
+                class="fa-solid fa-chevron-right choice-arrow"
+            ></i>
+
+        </a>
+
+
+
+        <!-- ==================================================
+             REVENDEDOR
+             ↓
+             REGISTRO
+        ================================================== -->
+
+        <a
+            href="registro.html?tipo=vendedor"
+            class="choice-card"
+        >
+
+            <div class="choice-icon">
+
+                <i class="fa-solid fa-store"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Revendedor
+
+                </h3>
+
+
+                <p>
+
+                    Publicar e vender produtos.
+
+                </p>
+
+            </div>
+
+
+            <i
+                class="fa-solid fa-chevron-right choice-arrow"
+            ></i>
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ======================================================
+     BOTTOM NAVIGATION
+====================================================== -->
+
+<nav class="mobile-navigation">
+
+
+<a href="../index.html">
+
+    <i class="fa-solid fa-house"></i>
+
+    <span>
+
+        Início
+
+    </span>
+
+</a>
+
+
+
+<a href="carrinho.html">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <span>
+
+        Carrinho
+
+    </span>
+
+</a>
+
+
+
+<a href="favoritos.html">
+
+    <i class="fa-solid fa-heart"></i>
+
+    <span>
+
+        Favoritos
+
+    </span>
+
+</a>
+
+
+
+<a
+    href="minha-conta.html"
+    class="active"
+>
+
+    <i class="fa-solid fa-user"></i>
+
+    <span>
+
+        Minha Conta
+
+    </span>
+
+</a>
+
+
+</nav>
+
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/script.js"></script>
+
+<script src="../js/menu.js"></script>
+
+<script src="../js/minha-conta.js"></script>
+
+
+</body>
+
+</html>
