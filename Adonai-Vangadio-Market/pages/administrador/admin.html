@@ -1,0 +1,2827 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Painel Premium de Administração do AV Market."
+    >
+
+    <meta
+        name="theme-color"
+        content="#080808"
+    >
+
+    <title>Administrador Premium | AV Market</title>
+
+
+    <!-- CSS GLOBAL -->
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+
+    <!-- CSS ADMIN -->
+
+    <link rel="stylesheet" href="../../css/admin.css">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="admin-body">
+
+
+<div class="admin-app">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="admin-header"
+        id="adminHeader"
+    >
+
+        <div class="admin-header-container">
+
+
+            <!-- MARCA -->
+
+            <a
+                href="../../index.html"
+                class="admin-brand"
+            >
+
+                <span class="admin-logo-av">
+                    AV
+                </span>
+
+                <span class="admin-logo-market">
+                    Market
+                </span>
+
+            </a>
+
+
+            <!-- CONTEXTO -->
+
+            <div class="admin-header-context">
+
+                <span>
+                    AV MARKET
+                </span>
+
+                <strong>
+                    Administração Premium
+                </strong>
+
+            </div>
+
+
+            <!-- AÇÕES DO ADMINISTRADOR -->
+
+            <div class="admin-header-actions">
+
+
+                <!-- PESQUISA -->
+
+                <button
+                    type="button"
+                    class="admin-header-action"
+                    id="adminGlobalSearchButton"
+                    aria-label="Pesquisar"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <!-- MENSAGENS -->
+
+                <button
+                    type="button"
+                    class="admin-header-action"
+                    id="adminMessagesButton"
+                    aria-label="Mensagens"
+                >
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <span
+                        class="admin-action-badge"
+                        id="adminMessageBadge"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <button
+                    type="button"
+                    class="admin-header-action"
+                    id="adminNotificationButton"
+                    aria-label="Notificações"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span
+                        class="admin-action-badge"
+                        id="adminNotificationBadge"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- CONTA -->
+
+                <div class="admin-account-wrapper">
+
+
+                    <button
+                        type="button"
+                        class="admin-account-button"
+                        id="adminAccountButton"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+
+                        <span class="admin-account-avatar">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </span>
+
+                        <span
+                            class="admin-account-name"
+                            id="adminHeaderName"
+                        >
+                            Administrador
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down admin-account-chevron"></i>
+
+                    </button>
+
+
+                    <!-- MENU DA CONTA -->
+
+                    <div
+                        class="admin-account-menu"
+                        id="adminAccountMenu"
+                    >
+
+                        <div class="admin-account-menu-header">
+
+                            <div class="admin-menu-avatar">
+
+                                <i class="fa-solid fa-user-tie"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong id="adminMenuName">
+                                    Administrador
+                                </strong>
+
+                                <span>
+                                    Administração Premium
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-menu-status">
+
+                            <span class="admin-online-dot"></span>
+
+                            <span>
+                                Conta administrativa ativa
+                            </span>
+
+                        </div>
+
+
+                        <div class="admin-menu-divider"></div>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="dashboard"
+                        >
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="mercadorias"
+                        >
+
+                            <i class="fa-solid fa-clipboard-check"></i>
+
+                            <span>
+                                Aprovações
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="produtos"
+                        >
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <span>
+                                Produtos
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="revendedores"
+                        >
+
+                            <i class="fa-solid fa-store"></i>
+
+                            <span>
+                                Revendedores
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="pagamentos"
+                        >
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                            <span>
+                                Financeiro
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="relatorios"
+                        >
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                            <span>
+                                Relatórios
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-menu-item"
+                            data-admin-section="definicoes"
+                        >
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span>
+                                Definições
+                            </span>
+
+                        </button>
+
+
+                        <div class="admin-menu-divider"></div>
+
+
+                        <button
+                            type="button"
+                            class="admin-account-logout"
+                            id="adminLogoutButton"
+                        >
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            <span>
+                                Sair da conta
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         LAYOUT
+    ====================================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+            <div class="admin-sidebar-top">
+
+
+                <div class="admin-sidebar-brand">
+
+                    <div class="admin-sidebar-logo">
+                        AV
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Administração
+                        </strong>
+
+                        <span>
+                            Premium Control
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-sidebar-level">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                    <div>
+
+                        <strong>
+                            ADMIN PREMIUM
+                        </strong>
+
+                        <span>
+                            Acesso total à plataforma
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <div class="admin-navigation-label">
+                        CENTRAL
+                    </div>
+
+
+                    <a
+                        href="#dashboard"
+                        class="admin-nav-link active"
+                        data-section="dashboard"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#mensagens"
+                        class="admin-nav-link"
+                        data-section="mensagens"
+                    >
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <span>
+                            Mensagens
+                        </span>
+
+                        <span
+                            class="admin-nav-count"
+                            id="adminSidebarMessages"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <div class="admin-navigation-label">
+                        MODERAÇÃO
+                    </div>
+
+
+                    <a
+                        href="#mercadorias"
+                        class="admin-nav-link"
+                        data-section="mercadorias"
+                    >
+
+                        <i class="fa-solid fa-clipboard-check"></i>
+
+                        <span>
+                            Aprovações
+                        </span>
+
+                        <span
+                            class="admin-nav-count warning"
+                            id="adminPendingProductsCount"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#produtos"
+                        class="admin-nav-link"
+                        data-section="produtos"
+                    >
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <span>
+                            Produtos
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#avaliacoes"
+                        class="admin-nav-link"
+                        data-section="avaliacoes"
+                    >
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span>
+                            Avaliações
+                        </span>
+
+                    </a>
+
+
+                    <div class="admin-navigation-label">
+                        UTILIZADORES
+                    </div>
+
+
+                    <a
+                        href="#revendedores"
+                        class="admin-nav-link"
+                        data-section="revendedores"
+                    >
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <span>
+                            Revendedores
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#compradores"
+                        class="admin-nav-link"
+                        data-section="compradores"
+                    >
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>
+                            Compradores
+                        </span>
+
+                    </a>
+
+
+                    <div class="admin-navigation-label">
+                        OPERAÇÕES
+                    </div>
+
+
+                    <a
+                        href="#pedidos"
+                        class="admin-nav-link"
+                        data-section="pedidos"
+                    >
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                        <span>
+                            Pedidos
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#pagamentos"
+                        class="admin-nav-link"
+                        data-section="pagamentos"
+                    >
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <span>
+                            Pagamentos
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#relatorios"
+                        class="admin-nav-link"
+                        data-section="relatorios"
+                    >
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <span>
+                            Relatórios
+                        </span>
+
+                    </a>
+
+
+                    <div class="admin-navigation-label">
+                        PLATAFORMA
+                    </div>
+
+
+                    <a
+                        href="#categorias"
+                        class="admin-nav-link"
+                        data-section="categorias"
+                    >
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <span>
+                            Categorias
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#definicoes"
+                        class="admin-nav-link"
+                        data-section="definicoes"
+                    >
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>
+                            Definições
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <div class="admin-sidebar-system">
+
+                    <span class="admin-system-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            Sistema online
+                        </strong>
+
+                        <span id="adminSystemStatus">
+                            AV Market operacional
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-sidebar-logout"
+                    id="adminSidebarLogout"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>
+                        Sair da conta
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <main
+            class="admin-main"
+            id="adminMain"
+        >
+
+
+            <!-- DASHBOARD -->
+
+            <section
+                class="admin-section"
+                id="dashboard"
+            >
+
+                <div class="admin-page-heading admin-hero-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            AV MARKET • ADMIN PREMIUM
+                        </span>
+
+                        <h1>
+                            Centro de controlo
+                        </h1>
+
+                        <p>
+                            Gestão completa da plataforma, utilizadores,
+                            mercadorias, operações e desempenho financeiro.
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-date-box">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <div>
+
+                            <span>
+                                Hoje
+                            </span>
+
+                            <strong id="adminCurrentDate">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-premium-status-bar">
+
+
+                    <div>
+
+                        <span class="admin-status-icon success">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Plataforma protegida
+                            </strong>
+
+                            <span>
+                                Controlo administrativo ativo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="admin-status-icon">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Base de dados
+                            </strong>
+
+                            <span id="adminDatabaseStatus">
+                                Ligação ativa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="admin-status-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Sincronização
+                            </strong>
+
+                            <span id="adminSyncStatus">
+                                Ativa
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-alert"
+                    id="adminPendingAlert"
+                >
+
+                    <div class="admin-alert-icon">
+
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                    </div>
+
+                    <div class="admin-alert-content">
+
+                        <strong>
+                            Central de aprovação
+                        </strong>
+
+                        <span id="adminPendingAlertText">
+                            A verificar mercadorias pendentes...
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="admin-alert-link"
+                        data-admin-section="mercadorias"
+                    >
+
+                        Ver aprovações
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- ESTATÍSTICAS -->
+
+                <div class="admin-stat-grid">
+
+
+                    <article class="admin-stat-card premium">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Volume de vendas
+                            </span>
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <strong id="adminTotalSales">
+                            0 Kz
+                        </strong>
+
+                        <small>
+                            Total movimentado
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Pedidos
+                            </span>
+
+                            <i class="fa-solid fa-receipt"></i>
+
+                        </div>
+
+                        <strong id="adminTotalOrders">
+                            0
+                        </strong>
+
+                        <small>
+                            Pedidos registados
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Produtos
+                            </span>
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                        </div>
+
+                        <strong id="adminTotalProducts">
+                            0
+                        </strong>
+
+                        <small>
+                            Produtos aprovados
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card warning">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Aprovações
+                            </span>
+
+                            <i class="fa-solid fa-clipboard-check"></i>
+
+                        </div>
+
+                        <strong id="adminTotalPending">
+                            0
+                        </strong>
+
+                        <small>
+                            Aguardando análise
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Revendedores
+                            </span>
+
+                            <i class="fa-solid fa-store"></i>
+
+                        </div>
+
+                        <strong id="adminTotalSellers">
+                            0
+                        </strong>
+
+                        <small>
+                            Contas registadas
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Compradores
+                            </span>
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <strong id="adminTotalBuyers">
+                            0
+                        </strong>
+
+                        <small>
+                            Contas registadas
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card premium">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                Receita AV Market
+                            </span>
+
+                            <i class="fa-solid fa-coins"></i>
+
+                        </div>
+
+                        <strong id="adminPlatformRevenue">
+                            0 Kz
+                        </strong>
+
+                        <small>
+                            Comissões da plataforma
+                        </small>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-heading">
+
+                            <span>
+                                A pagar
+                            </span>
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <strong id="adminPendingPayments">
+                            0 Kz
+                        </strong>
+
+                        <small>
+                            Valores a processar
+                        </small>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ATIVIDADE -->
+
+                <div class="admin-dashboard-grid">
+
+
+                    <section class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <span>
+                                    ATIVIDADE
+                                </span>
+
+                                <h2>
+                                    Atividade recente
+                                </h2>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="admin-panel-button"
+                                id="adminRefreshActivity"
+                            >
+
+                                <i class="fa-solid fa-rotate"></i>
+
+                                Atualizar
+
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="admin-activity-list"
+                            id="adminActivityList"
+                        >
+
+                            <div class="admin-empty-state">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                                <strong>
+                                    A carregar atividade...
+                                </strong>
+
+                                <span>
+                                    A sincronizar com o Firebase.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <span>
+                                    MODERAÇÃO
+                                </span>
+
+                                <h2>
+                                    Estado das mercadorias
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-review-summary">
+
+
+                            <div>
+
+                                <span>
+                                    Aguardando análise
+                                </span>
+
+                                <strong id="adminReviewPending">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Em avaliação
+                                </span>
+
+                                <strong id="adminReviewInProgress">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Aprovadas
+                                </span>
+
+                                <strong id="adminReviewApproved">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Rejeitadas
+                                </span>
+
+                                <strong id="adminReviewRejected">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="admin-panel-link"
+                            data-admin-section="mercadorias"
+                        >
+
+                            Abrir central de aprovação
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MERCADORIAS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="mercadorias"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            MODERAÇÃO • APROVAÇÕES
+                        </span>
+
+                        <h2>
+                            Central de mercadorias
+                        </h2>
+
+                        <p>
+                            Analise as mercadorias enviadas pelos revendedores,
+                            acompanhe o estado e aprove ou rejeite publicações.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-filter-bar">
+
+                    <div class="admin-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="adminProductSearch"
+                            placeholder="Pesquisar mercadoria..."
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="adminProductStatusFilter"
+                        class="admin-select"
+                    >
+
+                        <option value="all">
+                            Todos os estados
+                        </option>
+
+                        <option value="pending">
+                            Aguardando análise
+                        </option>
+
+                        <option value="review">
+                            Em avaliação
+                        </option>
+
+                        <option value="approved">
+                            Aprovadas
+                        </option>
+
+                        <option value="rejected">
+                            Rejeitadas
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="adminProductBusinessFilter"
+                        class="admin-select"
+                    >
+
+                        <option value="all">
+                            Todas as modalidades
+                        </option>
+
+                        <option value="platform">
+                            Plataforma 20% / 80%
+                        </option>
+
+                        <option value="direct">
+                            Venda direta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    class="admin-product-list"
+                    id="adminProductList"
+                >
+
+                    <div class="admin-empty-state large">
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        <strong>
+                            A carregar mercadorias...
+                        </strong>
+
+                        <span>
+                            A sincronizar com a base de dados.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MENSAGENS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="mensagens"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            COMUNICAÇÃO
+                        </span>
+
+                        <h2>
+                            Central de mensagens
+                        </h2>
+
+                        <p>
+                            Comunicação entre a administração,
+                            revendedores e compradores.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="adminNewMessageButton"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Nova mensagem
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-message-list"
+                    id="adminMessageList"
+                >
+
+                    <div class="admin-empty-state large">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <strong>
+                            A carregar mensagens...
+                        </strong>
+
+                        <span>
+                            A sincronizar com o Firebase.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PRODUTOS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="produtos"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            CATÁLOGO
+                        </span>
+
+                        <h2>
+                            Gestão de produtos
+                        </h2>
+
+                        <p>
+                            Controle os produtos publicados no AV Market.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="adminAddProductButton"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Adicionar produto
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-mini-stats">
+
+                    <div>
+                        <span>Publicados</span>
+                        <strong id="adminPublishedProducts">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Em avaliação</span>
+                        <strong id="adminProductsInReview">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Rejeitados</span>
+                        <strong id="adminRejectedProducts">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Categorias</span>
+                        <strong id="adminCategoryTotal">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Estado</th>
+                                <th>Ações</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminProductsTable">
+
+                            <tr>
+
+                                <td colspan="5">
+
+                                    <div class="admin-table-empty">
+
+                                        <i class="fa-solid fa-box"></i>
+
+                                        <span>
+                                            A carregar produtos...
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 REVENDEDORES
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="revendedores"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            UTILIZADORES
+                        </span>
+
+                        <h2>
+                            Gestão de revendedores
+                        </h2>
+
+                        <p>
+                            Controle contas, estados, atividade e produtos
+                            dos revendedores.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="adminAddSellerButton"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Adicionar revendedor
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-user-overview">
+
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+
+                        <div>
+                            <span>Total</span>
+                            <strong id="adminSellerTotal">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Ativos</span>
+                            <strong id="adminSellerActive">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <span>Pendentes</span>
+                            <strong id="adminSellerPending">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Revendedor</th>
+                                <th>E-mail</th>
+                                <th>Produtos</th>
+                                <th>Estado</th>
+                                <th>Ações</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminSellersTable">
+
+                            <tr>
+
+                                <td colspan="5">
+
+                                    <div class="admin-table-empty">
+
+                                        <i class="fa-solid fa-store"></i>
+
+                                        <span>
+                                            A carregar revendedores...
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 COMPRADORES
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="compradores"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            UTILIZADORES
+                        </span>
+
+                        <h2>
+                            Compradores
+                        </h2>
+
+                        <p>
+                            Gestão das contas e atividade de compra.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-user-overview">
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <span>Total</span>
+                            <strong id="adminBuyerTotal">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Ativos</span>
+                            <strong id="adminBuyerActive">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-user-card">
+
+                        <div class="admin-user-card-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+
+                        <div>
+                            <span>Compras</span>
+                            <strong id="adminBuyerPurchases">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Comprador</th>
+                                <th>E-mail</th>
+                                <th>Pedidos</th>
+                                <th>Estado</th>
+                                <th>Ações</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminBuyersTable">
+
+                            <tr>
+
+                                <td colspan="5">
+
+                                    <div class="admin-table-empty">
+
+                                        <i class="fa-solid fa-users"></i>
+
+                                        <span>
+                                            Nenhum comprador registado.
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- PEDIDOS -->
+
+            <section
+                class="admin-section"
+                id="pedidos"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            OPERAÇÕES
+                        </span>
+
+                        <h2>
+                            Gestão de pedidos
+                        </h2>
+
+                        <p>
+                            Acompanhe todos os pedidos realizados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-order-summary">
+
+                    <div>
+                        <span>Total</span>
+                        <strong id="adminOrdersTotal">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Pendentes</span>
+                        <strong id="adminOrdersPending">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Processados</span>
+                        <strong id="adminOrdersProcessed">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Concluídos</span>
+                        <strong id="adminOrdersCompleted">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Pedido</th>
+                                <th>Cliente</th>
+                                <th>Valor</th>
+                                <th>Estado</th>
+                                <th>Data</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminOrdersTable">
+
+                            <tr>
+
+                                <td colspan="5">
+
+                                    <div class="admin-table-empty">
+
+                                        <i class="fa-solid fa-receipt"></i>
+
+                                        <span>
+                                            Nenhum pedido registado.
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- PAGAMENTOS -->
+
+            <section
+                class="admin-section"
+                id="pagamentos"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            FINANCEIRO
+                        </span>
+
+                        <h2>
+                            Centro financeiro
+                        </h2>
+
+                        <p>
+                            Gestão da receita, comissão AV Market e valores
+                            destinados aos revendedores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-financial-grid">
+
+                    <div class="admin-financial-card">
+
+                        <span>
+                            Receita total
+                        </span>
+
+                        <strong id="adminFinancialRevenue">
+                            0 Kz
+                        </strong>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div class="admin-financial-card premium">
+
+                        <span>
+                            Comissão AV Market
+                        </span>
+
+                        <strong id="adminFinancialCommission">
+                            0 Kz
+                        </strong>
+
+                        <i class="fa-solid fa-coins"></i>
+
+                    </div>
+
+
+                    <div class="admin-financial-card">
+
+                        <span>
+                            A pagar aos revendedores
+                        </span>
+
+                        <strong id="adminFinancialSellerPayments">
+                            0 Kz
+                        </strong>
+
+                        <i class="fa-solid fa-store"></i>
+
+                    </div>
+
+
+                    <div class="admin-financial-card warning">
+
+                        <span>
+                            Pagamentos pendentes
+                        </span>
+
+                        <strong id="adminFinancialPending">
+                            0 Kz
+                        </strong>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Referência</th>
+                                <th>Utilizador</th>
+                                <th>Valor</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="adminPaymentsTable">
+
+                            <tr>
+
+                                <td colspan="5">
+
+                                    <div class="admin-table-empty">
+
+                                        <i class="fa-solid fa-wallet"></i>
+
+                                        <span>
+                                            Nenhum pagamento registado.
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- RELATÓRIOS -->
+
+            <section
+                class="admin-section"
+                id="relatorios"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            ANÁLISE PREMIUM
+                        </span>
+
+                        <h2>
+                            Relatórios
+                        </h2>
+
+                        <p>
+                            Indicadores de desempenho e inteligência
+                            operacional da plataforma.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="adminGenerateReport"
+                    >
+
+                        <i class="fa-solid fa-file-export"></i>
+
+                        Gerar relatório
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-report-grid">
+
+
+                    <article class="admin-report-card">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <div>
+
+                            <strong>
+                                Vendas
+                            </strong>
+
+                            <span>
+                                Desempenho comercial da plataforma.
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            data-report="sales"
+                        >
+                            Abrir
+                        </button>
+
+                    </article>
+
+
+                    <article class="admin-report-card">
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <div>
+
+                            <strong>
+                                Revendedores
+                            </strong>
+
+                            <span>
+                                Atividade e desempenho dos revendedores.
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            data-report="sellers"
+                        >
+                            Abrir
+                        </button>
+
+                    </article>
+
+
+                    <article class="admin-report-card">
+
+                        <i class="fa-solid fa-box"></i>
+
+                        <div>
+
+                            <strong>
+                                Produtos
+                            </strong>
+
+                            <span>
+                                Produtos, categorias e aprovações.
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            data-report="products"
+                        >
+                            Abrir
+                        </button>
+
+                    </article>
+
+
+                    <article class="admin-report-card">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <div>
+
+                            <strong>
+                                Financeiro
+                            </strong>
+
+                            <span>
+                                Receita, comissões e pagamentos.
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            data-report="financial"
+                        >
+                            Abrir
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    class="admin-report-output"
+                    id="adminReportOutput"
+                >
+
+                    <div class="admin-empty-state">
+
+                        <i class="fa-solid fa-file-chart-column"></i>
+
+                        <strong>
+                            Selecione um relatório
+                        </strong>
+
+                        <span>
+                            Os dados serão apresentados aqui.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- AVALIAÇÕES -->
+
+            <section
+                class="admin-section"
+                id="avaliacoes"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            QUALIDADE
+                        </span>
+
+                        <h2>
+                            Avaliações
+                        </h2>
+
+                        <p>
+                            Monitorização da qualidade dos produtos,
+                            compradores e revendedores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-rating-overview">
+
+                    <div class="admin-rating-card">
+
+                        <span>
+                            Média geral
+                        </span>
+
+                        <strong id="adminAverageRating">
+                            0.0
+                        </strong>
+
+                        <div class="admin-stars">
+
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-rating-card">
+
+                        <span>
+                            Avaliações
+                        </span>
+
+                        <strong id="adminRatingTotal">
+                            0
+                        </strong>
+
+                        <small>
+                            Total recebido
+                        </small>
+
+                    </div>
+
+
+                    <div class="admin-rating-card">
+
+                        <span>
+                            Pendentes
+                        </span>
+
+                        <strong id="adminRatingPending">
+                            0
+                        </strong>
+
+                        <small>
+                            A moderar
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-review-list"
+                    id="adminReviewList"
+                >
+
+                    <div class="admin-empty-state large">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <strong>
+                            Nenhuma avaliação
+                        </strong>
+
+                        <span>
+                            As avaliações recebidas aparecerão aqui.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CATEGORIAS -->
+
+            <section
+                class="admin-section"
+                id="categorias"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            CATÁLOGO
+                        </span>
+
+                        <h2>
+                            Categorias
+                        </h2>
+
+                        <p>
+                            Organização central do catálogo do AV Market.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="adminAddCategoryButton"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Nova categoria
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-category-grid"
+                    id="adminCategoryGrid"
+                >
+
+                    <!-- categorias carregadas pelo Firebase -->
+
+                </div>
+
+            </section>
+
+
+            <!-- DEFINIÇÕES -->
+
+            <section
+                class="admin-section"
+                id="definicoes"
+            >
+
+                <div class="admin-page-heading compact">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            ADMINISTRAÇÃO AVANÇADA
+                        </span>
+
+                        <h2>
+                            Definições
+                        </h2>
+
+                        <p>
+                            Controlo avançado da conta, plataforma,
+                            segurança, notificações e integração.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-settings-grid">
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="account"
+                    >
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <div>
+
+                            <strong>
+                                Conta administrativa
+                            </strong>
+
+                            <span>
+                                Perfil, dados e segurança do administrador.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="platform"
+                    >
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                        <div>
+
+                            <strong>
+                                Plataforma
+                            </strong>
+
+                            <span>
+                                Configurações gerais do AV Market.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="commission"
+                    >
+
+                        <i class="fa-solid fa-percent"></i>
+
+                        <div>
+
+                            <strong>
+                                Comissões
+                            </strong>
+
+                            <span>
+                                Gestão da divisão 20% / 80%.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="notifications"
+                    >
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <div>
+
+                            <strong>
+                                Notificações
+                            </strong>
+
+                            <span>
+                                Alertas e notificações administrativas.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="security"
+                    >
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <strong>
+                                Segurança
+                            </strong>
+
+                            <span>
+                                Acesso, sessões e proteção administrativa.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="firebase"
+                    >
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <div>
+
+                            <strong>
+                                Base de dados
+                            </strong>
+
+                            <span>
+                                Estado da integração com Firebase.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="approvals"
+                    >
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <div>
+
+                            <strong>
+                                Regras de aprovação
+                            </strong>
+
+                            <span>
+                                Controlo do fluxo de aprovação de mercadorias.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-setting-card"
+                        data-setting="permissions"
+                    >
+
+                        <i class="fa-solid fa-user-lock"></i>
+
+                        <div>
+
+                            <strong>
+                                Permissões
+                            </strong>
+
+                            <span>
+                                Níveis de acesso administrativo.
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-system-information">
+
+
+                    <div>
+
+                        <span>
+                            SISTEMA
+                        </span>
+
+                        <strong>
+                            AV Market
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            MODO
+                        </span>
+
+                        <strong id="adminSystemMode">
+                            Firebase conectado
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ACESSO
+                        </span>
+
+                        <strong>
+                            Administrador Premium
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            NÍVEL
+                        </span>
+
+                        <strong>
+                            Controlo total
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL DE MERCADORIA
+========================================================= -->
+
+<div
+    class="admin-modal"
+    id="adminProductModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+    <div class="admin-modal-content">
+
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <span>
+                    ANÁLISE DE MERCADORIA
+                </span>
+
+                <h3 id="adminModalProductName">
+                    Produto
+                </h3>
+
+            </div>
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                id="adminProductModalClose"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="admin-modal-body"
+            id="adminProductModalBody"
+        >
+
+            <div class="admin-modal-loading">
+
+                <i class="fa-solid fa-spinner"></i>
+
+                <span>
+                    A carregar dados...
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-modal-footer">
+
+
+            <button
+                type="button"
+                class="admin-secondary-button"
+                id="adminModalReviewButton"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Colocar em avaliação
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-danger-button"
+                id="adminModalRejectButton"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+                Rejeitar
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-success-button"
+                id="adminModalApproveButton"
+            >
+
+                <i class="fa-solid fa-check"></i>
+
+                Aprovar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL DE CONFIRMAÇÃO
+========================================================= -->
+
+<div
+    class="admin-confirm-modal"
+    id="adminConfirmModal"
+    aria-hidden="true"
+>
+
+    <div class="admin-confirm-overlay"></div>
+
+    <div class="admin-confirm-box">
+
+        <div class="admin-confirm-icon">
+
+            <i class="fa-solid fa-circle-question"></i>
+
+        </div>
+
+
+        <h3 id="adminConfirmTitle">
+            Confirmar ação
+        </h3>
+
+
+        <p id="adminConfirmMessage">
+            Tem a certeza que deseja continuar?
+        </p>
+
+
+        <div class="admin-confirm-actions">
+
+
+            <button
+                type="button"
+                class="admin-secondary-button"
+                id="adminConfirmCancel"
+            >
+                Cancelar
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-primary-button"
+                id="adminConfirmAccept"
+            >
+                Confirmar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="../../js/admin.js"></script>
+
+
+
+
+</body>
+
+</html>
