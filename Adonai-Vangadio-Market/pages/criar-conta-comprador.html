@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Crie a sua conta de comprador na AV Market."
+    >
+
+    <title>Criar Conta | AV Market</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="login-body">
+
+
+<header class="market-header auth-header">
+
+    <div class="auth-header-container">
+
+
+        <a
+            href="../index.html"
+            class="auth-brand"
+            aria-label="AV Market - Página inicial"
+        >
+
+            <strong>AV</strong>
+
+            <span>Market</span>
+
+        </a>
+
+
+        <a
+            href="../index.html"
+            class="auth-back"
+            aria-label="Voltar para a página inicial"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Voltar</span>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<main class="login-page">
+
+    <section
+        class="login-container"
+        aria-labelledby="buyerRegisterTitle"
+    >
+
+        <div class="login-card">
+
+
+            <div class="login-mark">
+
+                <span>AV</span>
+
+            </div>
+
+
+
+            <div class="login-welcome">
+
+                <h1 id="buyerRegisterTitle">
+                    Criar conta
+                </h1>
+
+                <p>
+                    Conta de comprador
+                </p>
+
+            </div>
+
+
+
+            <div
+                id="buyerRegisterMessage"
+                class="login-message"
+                role="alert"
+                aria-live="polite"
+                aria-atomic="true"
+            ></div>
+
+
+
+            <form
+                class="login-form"
+                id="buyerRegisterForm"
+                method="post"
+                novalidate
+            >
+
+
+                <div class="login-field">
+
+                    <label for="buyerName">
+                        Nome completo
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="buyerName"
+                            name="name"
+                            placeholder="Seu nome completo"
+                            autocomplete="name"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-field">
+
+                    <label for="buyerEmail">
+                        E-mail
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="buyerEmail"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            autocomplete="email"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-field">
+
+                    <label for="buyerPhone">
+                        Telefone / WhatsApp
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        <input
+                            type="tel"
+                            id="buyerPhone"
+                            name="phone"
+                            placeholder="+244 000 000 000"
+                            autocomplete="tel"
+                            maxlength="30"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-field">
+
+                    <label for="buyerPassword">
+                        Palavra-passe
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="buyerPassword"
+                            name="password"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            minlength="6"
+                            maxlength="128"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="buyerToggle"
+                            aria-label="Mostrar palavra-passe"
+                            aria-pressed="false"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-field">
+
+                    <label for="buyerConfirmPassword">
+                        Confirmar palavra-passe
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <input
+                            type="password"
+                            id="buyerConfirmPassword"
+                            name="confirmPassword"
+                            placeholder="••••••••"
+                            autocomplete="new-password"
+                            minlength="6"
+                            maxlength="128"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="buyerConfirmToggle"
+                            aria-label="Mostrar confirmação da palavra-passe"
+                            aria-pressed="false"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <label class="account-terms">
+
+                    <input
+                        type="checkbox"
+                        id="buyerTerms"
+                        name="terms"
+                        required
+                    >
+
+                    <span>
+                        Aceito os termos de utilização e a política de privacidade do AV Market.
+                    </span>
+
+                </label>
+
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="buyerCreateButton"
+                    aria-busy="false"
+                >
+
+                    <span id="buyerCreateButtonText">
+                        Criar conta
+                    </span>
+
+                    <i
+                        id="buyerCreateButtonIcon"
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-divider">
+
+                <span>ou</span>
+
+            </div>
+
+
+
+            <div class="account-create">
+
+                <div class="account-create-title">
+
+                    <span>
+                        Já tens uma conta?
+                    </span>
+
+                    <strong>
+                        Entra agora.
+                    </strong>
+
+                </div>
+
+
+
+                <a
+                    href="login.html"
+                    class="account-option"
+                >
+
+                    <div class="account-option-icon">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                    </div>
+
+                    <div class="account-option-text">
+
+                        <strong>
+                            Entrar
+                        </strong>
+
+                        <span>
+                            Aceder à conta
+                        </span>
+
+                    </div>
+
+                    <i
+                        class="fa-solid fa-chevron-right account-arrow"
+                        aria-hidden="true"
+                    ></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<script
+    type="module"
+    src="../js/criar-conta-comprador.js"
+></script>
+
+
+</body>
+
+</html>
