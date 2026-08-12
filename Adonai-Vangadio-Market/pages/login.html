@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AV Market — Login e criação de conta"
+    >
+
+    <title>Login | AV Market</title>
+
+    <!-- CSS DO LOGIN -->
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         LOGIN / AUTENTICAÇÃO
+    ====================================================== -->
+
+    <main class="auth-page">
+
+        <section
+            class="auth-container"
+            id="authContainer"
+        >
+
+
+            <!-- =================================================
+                 ÁREA DOS FORMULÁRIOS
+            ================================================== -->
+
+            <div class="forms-area">
+
+
+                <!-- =============================================
+                     FORMULÁRIO DE LOGIN
+                ============================================== -->
+
+                <div
+                    class="form-screen login-screen"
+                    id="loginScreen"
+                >
+
+                    <div class="form-content">
+
+                        <div class="form-logo mobile-logo">
+                            <span>AV</span>
+                        </div>
+
+                        <span class="form-label">
+                            AV MARKET
+                        </span>
+
+                        <h1>
+                            Entrar
+                        </h1>
+
+                        <p class="form-description">
+                            Acede à tua conta e continua a utilizar o AV Market.
+                        </p>
+
+
+                        <form
+                            id="loginForm"
+                            novalidate
+                        >
+
+                            <!-- EMAIL -->
+
+                            <div class="input-group">
+
+                                <label for="loginEmail">
+                                    E-mail
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+
+                                        <polyline
+                                            points="22,6 12,13 2,6"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="email"
+                                        id="loginEmail"
+                                        placeholder="O teu e-mail"
+                                        autocomplete="email"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="input-group">
+
+                                <div class="password-heading">
+
+                                    <label for="loginPassword">
+                                        Palavra-passe
+                                    </label>
+
+                                    <button
+                                        type="button"
+                                        class="forgot-password"
+                                        id="forgotPassword"
+                                    >
+                                        Esqueci a palavra-passe
+                                    </button>
+
+                                </div>
+
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="10"
+                                            width="18"
+                                            height="11"
+                                            rx="2"
+                                        />
+
+                                        <path
+                                            d="M7 10V7a5 5 0 0 1 10 0v3"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="password"
+                                        id="loginPassword"
+                                        placeholder="A tua palavra-passe"
+                                        autocomplete="current-password"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="loginPassword"
+                                        aria-label="Mostrar palavra-passe"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
+                                            />
+
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="3"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- BOTÃO LOGIN -->
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+                                <span>Entrar</span>
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <line
+                                        x1="5"
+                                        y1="12"
+                                        x2="19"
+                                        y2="12"
+                                    />
+
+                                    <polyline
+                                        points="12,5 19,12 12,19"
+                                    />
+                                </svg>
+
+                            </button>
+
+
+                            <div
+                                class="form-message"
+                                id="loginMessage"
+                            ></div>
+
+                        </form>
+
+
+                        <!-- LOGIN SOCIAL -->
+
+                        <div class="social-section">
+
+                            <span>
+                                ou continuar com
+                            </span>
+
+                            <div class="social-buttons">
+
+                                <button
+                                    type="button"
+                                    aria-label="Google"
+                                >
+                                    G
+                                </button>
+
+                                <button
+                                    type="button"
+                                    aria-label="Facebook"
+                                >
+                                    f
+                                </button>
+
+                                <button
+                                    type="button"
+                                    aria-label="Apple"
+                                >
+                                    
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     FORMULÁRIO DE COMPRADOR
+                ============================================== -->
+
+                <div
+                    class="form-screen register-screen buyer-screen"
+                    id="buyerScreen"
+                >
+
+                    <div class="form-content">
+
+                        <div class="form-logo mobile-logo">
+                            <span>AV</span>
+                        </div>
+
+                        <span class="form-label">
+                            NOVA CONTA
+                        </span>
+
+                        <h1>
+                            Criar como Comprador
+                        </h1>
+
+                        <p class="form-description">
+                            Cria a tua conta gratuitamente e começa a comprar no AV Market.
+                        </p>
+
+
+                        <form
+                            id="buyerForm"
+                            novalidate
+                        >
+
+                            <!-- NOME -->
+
+                            <div class="input-group">
+
+                                <label for="buyerName">
+                                    Nome completo
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <circle
+                                            cx="12"
+                                            cy="7"
+                                            r="4"
+                                        />
+
+                                        <path
+                                            d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="text"
+                                        id="buyerName"
+                                        placeholder="O teu nome"
+                                        autocomplete="name"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="input-group">
+
+                                <label for="buyerEmail">
+                                    E-mail
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2-2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+
+                                        <polyline
+                                            points="22,6 12,13 2,6"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="email"
+                                        id="buyerEmail"
+                                        placeholder="O teu e-mail"
+                                        autocomplete="email"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="input-group">
+
+                                <label for="buyerPassword">
+                                    Palavra-passe
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="10"
+                                            width="18"
+                                            height="11"
+                                            rx="2"
+                                        />
+
+                                        <path
+                                            d="M7 10V7a5 5 0 0 1 10 0v3"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="password"
+                                        id="buyerPassword"
+                                        placeholder="Cria uma palavra-passe"
+                                        autocomplete="new-password"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="buyerPassword"
+                                        aria-label="Mostrar palavra-passe"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
+                                            />
+
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="3"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONFIRMAR PASSWORD -->
+
+                            <div class="input-group">
+
+                                <label for="buyerPasswordConfirm">
+                                    Confirmar palavra-passe
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="10"
+                                            width="18"
+                                            height="11"
+                                            rx="2"
+                                        />
+
+                                        <path
+                                            d="M7 10V7a5 5 0 0 1 10 0v3"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="password"
+                                        id="buyerPasswordConfirm"
+                                        placeholder="Repete a palavra-passe"
+                                        autocomplete="new-password"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="buyerPasswordConfirm"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"
+                                            />
+
+                                            <circle
+                                                cx="12"
+                                                cy="12"
+                                                r="3"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+                                <span>Criar conta</span>
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                >
+                                    <line
+                                        x1="5"
+                                        y1="12"
+                                        x2="19"
+                                        y2="12"
+                                    />
+
+                                    <polyline
+                                        points="12,5 19,12 12,19"
+                                    />
+                                </svg>
+
+                            </button>
+
+
+                            <div
+                                class="form-message"
+                                id="buyerMessage"
+                            ></div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     FORMULÁRIO DE REVENDEDOR
+                ============================================== -->
+
+                <div
+                    class="form-screen register-screen reseller-screen"
+                    id="resellerScreen"
+                >
+
+                    <div class="form-content">
+
+                        <div class="form-logo mobile-logo">
+                            <span>AV</span>
+                        </div>
+
+                        <span class="form-label">
+                            CONTA PROFISSIONAL
+                        </span>
+
+                        <h1>
+                            Criar como Revendedor
+                        </h1>
+
+                        <p class="form-description">
+                            Cria a tua conta profissional e começa a vender no AV Market.
+                        </p>
+
+
+                        <form
+                            id="resellerForm"
+                            novalidate
+                        >
+
+                            <!-- NOME -->
+
+                            <div class="input-group">
+
+                                <label for="resellerName">
+                                    Nome completo
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg viewBox="0 0 24 24">
+                                        <circle
+                                            cx="12"
+                                            cy="7"
+                                            r="4"
+                                        />
+
+                                        <path
+                                            d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                                        />
+                                    </svg>
+
+                                    <input
+                                        type="text"
+                                        id="resellerName"
+                                        placeholder="O teu nome"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- NEGÓCIO -->
+
+                            <div class="input-group">
+
+                                <label for="resellerBusiness">
+                                    Nome do negócio
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M3 21h18"
+                                        />
+
+                                        <path
+                                            d="M5 21V7l7-4 7 4v14"
+                                        />
+
+                                        <path
+                                            d="M9 21v-5h6v5"
+                                        />
+
+                                    </svg>
+
+                                    <input
+                                        type="text"
+                                        id="resellerBusiness"
+                                        placeholder="Nome da loja ou negócio"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="input-group">
+
+                                <label for="resellerEmail">
+                                    E-mail
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        />
+
+                                        <polyline
+                                            points="22,6 12,13 2,6"
+                                        />
+
+                                    </svg>
+
+                                    <input
+                                        type="email"
+                                        id="resellerEmail"
+                                        placeholder="E-mail profissional"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- TELEFONE -->
+
+                            <div class="input-group">
+
+                                <label for="resellerPhone">
+                                    Telefone
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <svg viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.5 2.1L9 11a16 16 0 0 0 4 4l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"
+                                        />
+
+                                    </svg>
+
+                                    <input
+                                        type="tel"
+                                        id="resellerPhone"
+                                        placeholder="+244 9xx xxx xxx"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+
+                                <span>
+                                    Continuar
+                                </span>
+
+                                <svg viewBox="0 0 24 24">
+
+                                    <line
+                                        x1="5"
+                                        y1="12"
+                                        x2="19"
+                                        y2="12"
+                                    />
+
+                                    <polyline
+                                        points="12,5 19,12 12,19"
+                                    />
+
+                                </svg>
+
+                            </button>
+
+
+                            <div
+                                class="form-message"
+                                id="resellerMessage"
+                            ></div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAINEL ESCURO ANIMADO
+            ================================================== -->
+
+            <aside
+                class="welcome-panel"
+                id="welcomePanel"
+            >
+
+                <div class="welcome-content">
+
+
+                    <!-- LOGO -->
+
+                    <div class="brand-logo">
+
+                        <span class="brand-mark">
+                            AV
+                        </span>
+
+                        <span class="brand-name">
+                            AV MARKET
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- ESTADO INICIAL -->
+
+                    <div
+                        class="welcome-state welcome-login-state"
+                        id="welcomeLoginState"
+                    >
+
+                        <span class="welcome-small">
+                            BEM-VINDO AO
+                        </span>
+
+                        <h2>
+                            AV Market
+                        </h2>
+
+                        <p>
+                            Ainda não tens uma conta?
+                            Cria a tua conta gratuitamente.
+                        </p>
+
+
+                        <div class="account-choice">
+
+                            <span class="choice-title">
+                                Criar conta como:
+                            </span>
+
+
+                            <button
+                                type="button"
+                                class="choice-button"
+                                id="buyerButton"
+                            >
+
+                                <span class="choice-icon">
+
+                                    <svg viewBox="0 0 24 24">
+
+                                        <circle
+                                            cx="12"
+                                            cy="7"
+                                            r="4"
+                                        />
+
+                                        <path
+                                            d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"
+                                        />
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="choice-text">
+
+                                    <strong>
+                                        Comprador
+                                    </strong>
+
+                                    <small>
+                                        Quero comprar produtos
+                                    </small>
+
+                                </span>
+
+                                <span class="choice-arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="choice-button"
+                                id="resellerButton"
+                            >
+
+                                <span class="choice-icon">
+
+                                    <svg viewBox="0 0 24 24">
+
+                                        <path
+                                            d="M3 21h18"
+                                        />
+
+                                        <path
+                                            d="M5 21V7l7-4 7 4v14"
+                                        />
+
+                                        <path
+                                            d="M9 21v-5h6v5"
+                                        />
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="choice-text">
+
+                                    <strong>
+                                        Revendedor
+                                    </strong>
+
+                                    <small>
+                                        Quero vender produtos
+                                    </small>
+
+                                </span>
+
+                                <span class="choice-arrow">
+                                    →
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ESTADO DE REGISTO -->
+
+                    <div
+                        class="welcome-state welcome-register-state"
+                        id="welcomeRegisterState"
+                    >
+
+                        <span class="welcome-small">
+                            JÁ TENS UMA CONTA?
+                        </span>
+
+                        <h2>
+                            Bem-vindo de volta.
+                        </h2>
+
+                        <p>
+                            Entra na tua conta para continuar
+                            no AV Market.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="outline-button"
+                            id="backToLogin"
+                        >
+                            Entrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT DO LOGIN
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="js/login.js"
+    ></script>
+
+</body>
+
+</html>
