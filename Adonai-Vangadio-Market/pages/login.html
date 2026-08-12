@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Entre na sua conta AV Market."
+    >
+
+    <title>Entrar | AV Market</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="login-body">
+
+
+<header class="market-header auth-header">
+
+    <div class="auth-header-container">
+
+
+        <a
+            href="../index.html"
+            class="auth-brand"
+            aria-label="AV Market - Página inicial"
+        >
+
+            <strong>AV</strong>
+
+            <span>Market</span>
+
+        </a>
+
+
+        <a
+            href="../index.html"
+            class="auth-back"
+            aria-label="Voltar para a página inicial"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            <span>Voltar</span>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<main class="login-page">
+
+    <section
+        class="login-container"
+        aria-labelledby="loginTitle"
+    >
+
+        <div class="login-card">
+
+
+            <div class="login-mark">
+
+                <span>AV</span>
+
+            </div>
+
+
+
+            <div class="login-welcome">
+
+                <h1 id="loginTitle">
+                    Bem-vindo de volta
+                </h1>
+
+                <p>
+                    Entre na sua conta AV Market
+                </p>
+
+            </div>
+
+
+
+            <div
+                id="loginMessage"
+                class="login-message"
+                role="alert"
+                aria-live="polite"
+                aria-atomic="true"
+            ></div>
+
+
+
+            <form
+                class="login-form"
+                id="loginForm"
+                method="post"
+                autocomplete="on"
+                novalidate
+            >
+
+
+                <div class="login-field">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            autocomplete="username"
+                            maxlength="150"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-field">
+
+                    <label for="password">
+                        Palavra-passe
+                    </label>
+
+                    <div class="login-input">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            autocomplete="current-password"
+                            maxlength="128"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Mostrar palavra-passe"
+                            aria-pressed="false"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-forgot">
+
+                    <a href="recuperar-senha.html">
+                        Esqueceu a palavra-passe?
+                    </a>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                    aria-busy="false"
+                >
+
+                    <span id="loginButtonText">
+                        Entrar
+                    </span>
+
+                    <i
+                        id="loginButtonIcon"
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-divider">
+
+                <span>ou</span>
+
+            </div>
+
+
+
+            <div class="account-create">
+
+                <div class="account-create-title">
+
+                    <span>
+                        Não possui uma conta?
+                    </span>
+
+                    <strong>
+                        Crie a sua.
+                    </strong>
+
+                </div>
+
+
+
+                <div class="account-options">
+
+
+                    <a
+                        href="criar-conta-comprador.html"
+                        class="account-option"
+                    >
+
+                        <div class="account-option-icon">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </div>
+
+                        <div class="account-option-text">
+
+                            <strong>
+                                Comprador
+                            </strong>
+
+                            <span>
+                                Criar conta
+                            </span>
+
+                        </div>
+
+                        <i
+                            class="fa-solid fa-chevron-right account-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="contrato-revendedor.html"
+                        class="account-option"
+                    >
+
+                        <div class="account-option-icon">
+
+                            <i class="fa-solid fa-store"></i>
+
+                        </div>
+
+                        <div class="account-option-text">
+
+                            <strong>
+                                Revendedor
+                            </strong>
+
+                            <span>
+                                Criar conta
+                            </span>
+
+                        </div>
+
+                        <i
+                            class="fa-solid fa-chevron-right account-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<script
+    type="module"
+    src="../js/login.js"
+></script>
+
+
+</body>
+
+</html>
