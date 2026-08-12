@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Crie a sua conta de revendedor na AV Market."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0d0d0d"
+    >
+
+    <title>Criar Conta Revendedor | AV Market</title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="login-body">
+
+
+    <!-- ==================================================
+         CABEÇALHO
+    ================================================== -->
+
+    <header class="market-header auth-header">
+
+        <div class="auth-header-container">
+
+
+            <a
+                href="../index.html"
+                class="auth-brand"
+                aria-label="AV Market - Página inicial"
+            >
+
+                <strong>AV</strong>
+
+                <span>Market</span>
+
+            </a>
+
+
+            <a
+                href="contrato-revendedor.html"
+                class="auth-back"
+                aria-label="Voltar para o contrato de revendedor"
+            >
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true"
+                ></i>
+
+                <span>Voltar</span>
+
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    ================================================== -->
+
+    <main class="login-page">
+
+
+        <section
+            class="login-container"
+            aria-labelledby="sellerRegisterTitle"
+        >
+
+
+            <div class="login-card">
+
+
+                <!-- MARCA -->
+
+                <div
+                    class="login-mark"
+                    aria-hidden="true"
+                >
+
+                    <span>AV</span>
+
+                </div>
+
+
+
+                <!-- TÍTULO -->
+
+                <div class="login-welcome">
+
+                    <h1 id="sellerRegisterTitle">
+                        Criar conta
+                    </h1>
+
+                    <p>
+                        Conta de revendedor
+                    </p>
+
+                </div>
+
+
+
+                <!-- MENSAGEM -->
+
+                <div
+                    id="sellerRegisterMessage"
+                    class="login-message"
+                    role="alert"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    hidden
+                ></div>
+
+
+
+                <!-- ==================================================
+                     FORMULÁRIO
+                ================================================== -->
+
+                <form
+                    class="login-form"
+                    id="sellerRegisterForm"
+                    method="post"
+                    autocomplete="on"
+                    novalidate
+                >
+
+
+                    <!-- NOME / EMPRESA -->
+
+                    <div class="login-field">
+
+                        <label for="sellerName">
+                            Nome completo / Empresa
+                        </label>
+
+                        <div class="login-input">
+
+                            <i
+                                class="fa-regular fa-user"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="text"
+                                id="sellerName"
+                                name="sellerName"
+                                placeholder="Nome ou empresa"
+                                autocomplete="name"
+                                maxlength="150"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="login-field">
+
+                        <label for="sellerEmail">
+                            E-mail
+                        </label>
+
+                        <div class="login-input">
+
+                            <i
+                                class="fa-regular fa-envelope"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="email"
+                                id="sellerEmail"
+                                name="sellerEmail"
+                                placeholder="seuemail@exemplo.com"
+                                autocomplete="email"
+                                maxlength="150"
+                                inputmode="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TELEFONE -->
+
+                    <div class="login-field">
+
+                        <label for="sellerPhone">
+                            Telefone / WhatsApp
+                        </label>
+
+                        <div class="login-input">
+
+                            <i
+                                class="fa-brands fa-whatsapp"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="tel"
+                                id="sellerPhone"
+                                name="sellerPhone"
+                                placeholder="+244 000 000 000"
+                                autocomplete="tel"
+                                maxlength="30"
+                                inputmode="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="login-field">
+
+                        <label for="sellerPassword">
+                            Palavra-passe
+                        </label>
+
+                        <div class="login-input">
+
+                            <i
+                                class="fa-solid fa-lock"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="password"
+                                id="sellerPassword"
+                                name="sellerPassword"
+                                placeholder="••••••••"
+                                autocomplete="new-password"
+                                minlength="6"
+                                maxlength="128"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="sellerToggle"
+                                aria-label="Mostrar palavra-passe"
+                                aria-pressed="false"
+                            >
+
+                                <i
+                                    class="fa-regular fa-eye"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIRMAR PASSWORD -->
+
+                    <div class="login-field">
+
+                        <label for="sellerConfirmPassword">
+                            Confirmar palavra-passe
+                        </label>
+
+                        <div class="login-input">
+
+                            <i
+                                class="fa-solid fa-shield-halved"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="password"
+                                id="sellerConfirmPassword"
+                                name="sellerConfirmPassword"
+                                placeholder="••••••••"
+                                autocomplete="new-password"
+                                minlength="6"
+                                maxlength="128"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="sellerConfirmToggle"
+                                aria-label="Mostrar confirmação da palavra-passe"
+                                aria-pressed="false"
+                            >
+
+                                <i
+                                    class="fa-regular fa-eye"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONTRATO -->
+
+                    <label
+                        class="account-terms"
+                        for="sellerTerms"
+                    >
+
+                        <input
+                            type="checkbox"
+                            id="sellerTerms"
+                            name="sellerTerms"
+                            required
+                        >
+
+                        <span>
+                            Aceito o contrato de revendedor AV Market.
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="sellerCreateButton"
+                        aria-busy="false"
+                    >
+
+                        <span id="sellerCreateButtonText">
+                            Criar conta
+                        </span>
+
+                        <i
+                            id="sellerCreateButtonIcon"
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- DIVISOR -->
+
+                <div
+                    class="login-divider"
+                    aria-hidden="true"
+                >
+
+                    <span>ou</span>
+
+                </div>
+
+
+
+                <!-- LOGIN -->
+
+                <div class="account-create">
+
+                    <div class="account-create-title">
+
+                        <span>
+                            Já tens uma conta?
+                        </span>
+
+                        <strong>
+                            Entra agora.
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="login.html"
+                        class="account-option"
+                        aria-label="Entrar na sua conta"
+                    >
+
+                        <div
+                            class="account-option-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                        </div>
+
+
+                        <div class="account-option-text">
+
+                            <strong>
+                                Entrar
+                            </strong>
+
+                            <span>
+                                Aceder à conta
+                            </span>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-right account-arrow"
+                            aria-hidden="true"
+                        ></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script
+        type="module"
+        src="../js/criar-conta-revendedor.js"
+    ></script>
+
+
+</body>
+
+</html>
