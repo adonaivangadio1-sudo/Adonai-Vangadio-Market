@@ -1,0 +1,1282 @@
+/* =========================================================
+   AV MARKET
+   CONTRATO DE REVENDEDOR
+   DARK PREMIUM — RESPONSIVO
+========================================================= */
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body.seller-contract-body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 0%,
+            rgba(199,154,59,0.10),
+            transparent 34%
+        ),
+        #0b0b0b;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.seller-contract-header {
+    width: 100%;
+
+    background:
+        rgba(8,8,8,0.94);
+
+    border-bottom:
+        1px solid rgba(199,154,59,0.14);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+.seller-contract-header-container {
+    width: min(
+        1180px,
+        calc(100% - 40px)
+    );
+
+    min-height: 68px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.seller-contract-brand {
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: 5px;
+
+    color: inherit;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: opacity .25s ease;
+}
+
+
+.seller-contract-brand:hover {
+    opacity: .9;
+}
+
+
+.seller-contract-brand strong {
+    color: #C79A3B;
+
+    font-size: 1.45rem;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -.06em;
+}
+
+
+.seller-contract-brand span {
+    color: #ffffff;
+
+    font-size: .82rem;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+.seller-contract-back {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #999999;
+
+    text-decoration: none;
+
+    font-size: .70rem;
+    font-weight: 500;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+.seller-contract-back:hover {
+    color: #C79A3B;
+
+    transform: translateX(-2px);
+}
+
+
+.seller-contract-back i {
+    font-size: .65rem;
+}
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.seller-contract-page {
+    width: 100%;
+    min-height:
+        calc(100vh - 68px);
+
+    padding:
+        50px
+        20px
+        65px;
+
+    display: flex;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(199,154,59,0.035),
+            transparent 38%
+        );
+}
+
+
+.seller-contract-section {
+    width: 100%;
+}
+
+
+.seller-contract-container {
+    width: 100%;
+    max-width: 780px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.seller-contract-card {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        38px
+        38px
+        32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27,27,27,0.98),
+            rgba(15,15,15,0.98)
+        );
+
+    border:
+        1px solid rgba(199,154,59,0.17);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 28px 75px rgba(0,0,0,0.45);
+
+    overflow: hidden;
+}
+
+
+/* linha superior */
+
+.seller-contract-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(199,154,59,0.38),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MARCA AV
+========================================================= */
+
+.seller-contract-mark {
+    width: 56px;
+    height: 56px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121212,
+            #0c0c0c
+        );
+
+    border:
+        1px solid rgba(199,154,59,0.23);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.02),
+        0 10px 25px rgba(0,0,0,0.20);
+}
+
+
+.seller-contract-mark span {
+    color: #C79A3B;
+
+    font-size: 1.18rem;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -.06em;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.seller-contract-heading {
+    text-align: center;
+}
+
+
+.seller-contract-icon {
+    width: 44px;
+    height: 44px;
+
+    margin:
+        0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(199,154,59,0.075);
+
+    border:
+        1px solid rgba(199,154,59,0.18);
+
+    color: #C79A3B;
+}
+
+
+.seller-contract-icon i {
+    font-size: .92rem;
+}
+
+
+.seller-contract-tag {
+    display: block;
+
+    color: #C79A3B;
+
+    font-size: .56rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.seller-contract-heading h1 {
+    margin:
+        7px 0 0;
+
+    color: #ffffff;
+
+    font-size: 1.62rem;
+    font-weight: 650;
+
+    line-height: 1.25;
+
+    letter-spacing: -.035em;
+}
+
+
+.seller-contract-heading p {
+    max-width: 500px;
+
+    margin:
+        8px auto 0;
+
+    color: #858585;
+
+    font-size: .67rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.contract-introduction {
+    margin-top: 28px;
+
+    padding:
+        16px
+        18px;
+
+    background:
+        rgba(199,154,59,0.045);
+
+    border:
+        1px solid rgba(199,154,59,0.10);
+
+    border-radius: 11px;
+}
+
+
+.contract-introduction p {
+    margin: 0;
+
+    color: #999999;
+
+    font-size: .62rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   DOCUMENTO
+========================================================= */
+
+.seller-contract-document {
+    width: 100%;
+
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   CLÁUSULA
+========================================================= */
+
+.contract-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding:
+        18px;
+
+    background: #111111;
+
+    border:
+        1px solid #252525;
+
+    border-radius: 12px;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        transform .25s ease;
+}
+
+
+.contract-row:hover {
+    background: #131313;
+
+    border-color:
+        rgba(199,154,59,0.25);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.contract-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(199,154,59,0.08);
+
+    border:
+        1px solid rgba(199,154,59,0.16);
+
+    color: #C79A3B;
+
+    font-size: .60rem;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.contract-row h3 {
+    margin:
+        1px 0 7px;
+
+    color: #ffffff;
+
+    font-size: .76rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+.contract-row p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: .62rem;
+
+    line-height: 1.75;
+}
+
+
+.contract-row p strong {
+    color: #C79A3B;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DESTAQUE COMISSÃO
+========================================================= */
+
+.contract-highlight {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(199,154,59,0.055),
+            #111111
+        );
+
+    border-color:
+        rgba(199,154,59,0.22);
+}
+
+
+/* =========================================================
+   COMISSÃO
+========================================================= */
+
+.commission-box {
+    width: 100%;
+
+    margin-top: 17px;
+
+    padding:
+        16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    background: #0c0c0c;
+
+    border:
+        1px solid rgba(199,154,59,0.13);
+
+    border-radius: 11px;
+}
+
+
+.commission-box > div:not(.commission-divider) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3px;
+
+    min-width: 60px;
+}
+
+
+.commission-box strong {
+    color: #C79A3B;
+
+    font-size: 1.22rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.commission-box span {
+    color: #666666;
+
+    font-size: .56rem;
+
+    line-height: 1.3;
+}
+
+
+.commission-divider {
+    width: 1px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    background: #292929;
+}
+
+
+/* =========================================================
+   ACEITAÇÃO
+========================================================= */
+
+.seller-contract-accept {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding:
+        14px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    background: #111111;
+
+    border:
+        1px solid #252525;
+
+    border-radius: 10px;
+
+    color: #858585;
+
+    font-size: .60rem;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease;
+}
+
+
+.seller-contract-accept:hover {
+    background: #131313;
+
+    border-color:
+        rgba(199,154,59,0.18);
+}
+
+
+.seller-contract-accept input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.seller-contract-check {
+    width: 17px;
+    height: 17px;
+
+    flex:
+        0 0 17px;
+
+    margin-top: 1px;
+
+    border:
+        1px solid #444444;
+
+    border-radius: 4px;
+
+    background: #0b0b0b;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.seller-contract-accept input:checked
++ .seller-contract-check {
+    background: #C79A3B;
+
+    border-color: #C79A3B;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(199,154,59,0.08);
+}
+
+
+.seller-contract-accept input:checked
++ .seller-contract-check::after {
+    content: "";
+
+    display: block;
+
+    width: 4px;
+    height: 8px;
+
+    margin:
+        2px auto 0;
+
+    border:
+        solid #0b0b0b;
+
+    border-width:
+        0
+        2px
+        2px
+        0;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.seller-contract-button {
+    width: 100%;
+    min-height: 47px;
+
+    margin-top: 12px;
+
+    padding:
+        0
+        17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border:
+        1px solid #C79A3B;
+
+    border-radius: 10px;
+
+    background: #C79A3B;
+
+    color: #0b0b0b;
+
+    text-decoration: none;
+
+    font-size: .68rem;
+    font-weight: 600;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.seller-contract-button:hover {
+    background: #E2BC6A;
+
+    border-color: #E2BC6A;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 22px rgba(199,154,59,0.14);
+}
+
+
+.seller-contract-button:active {
+    transform: translateY(0);
+}
+
+
+.seller-contract-button.disabled {
+    opacity: .45;
+
+    pointer-events: none;
+
+    box-shadow: none;
+}
+
+
+.seller-contract-button i {
+    font-size: .65rem;
+}
+
+
+/* =========================================================
+   SEGURANÇA
+========================================================= */
+
+.seller-contract-security {
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #555555;
+
+    font-size: .55rem;
+}
+
+
+.seller-contract-security i {
+    color: #C79A3B;
+
+    font-size: .63rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .seller-contract-header-container {
+        width: calc(100% - 32px);
+    }
+
+
+    .seller-contract-page {
+        padding:
+            42px
+            16px
+            50px;
+    }
+
+
+    .seller-contract-container {
+        max-width: 700px;
+    }
+
+
+    .seller-contract-card {
+        padding:
+            34px
+            28px
+            29px;
+
+        border-radius: 18px;
+    }
+
+
+    .seller-contract-heading h1 {
+        font-size: 1.48rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .seller-contract-header {
+        height: 62px;
+    }
+
+
+    .seller-contract-header-container {
+        min-height: 62px;
+
+        width: calc(100% - 30px);
+    }
+
+
+    .seller-contract-brand strong {
+        font-size: 1.30rem;
+    }
+
+
+    .seller-contract-brand span {
+        font-size: .76rem;
+    }
+
+
+    .seller-contract-back {
+        font-size: .64rem;
+
+        gap: 6px;
+    }
+
+
+    .seller-contract-page {
+        min-height:
+            calc(100vh - 62px);
+
+        padding:
+            88px
+            15px
+            35px;
+    }
+
+
+    .seller-contract-container {
+        width: 100%;
+    }
+
+
+    .seller-contract-card {
+        padding:
+            29px
+            20px
+            25px;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 18px 45px rgba(0,0,0,0.32);
+    }
+
+
+    .seller-contract-mark {
+        width: 54px;
+        height: 54px;
+
+        margin-bottom: 17px;
+
+        border-radius: 14px;
+    }
+
+
+    .seller-contract-mark span {
+        font-size: 1.08rem;
+    }
+
+
+    .seller-contract-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 11px;
+    }
+
+
+    .seller-contract-heading h1 {
+        font-size: 1.32rem;
+    }
+
+
+    .seller-contract-heading p {
+        font-size: .62rem;
+    }
+
+
+    .contract-introduction {
+        margin-top: 24px;
+
+        padding:
+            14px
+            15px;
+    }
+
+
+    .contract-introduction p {
+        font-size: .59rem;
+
+        line-height: 1.7;
+    }
+
+
+    .seller-contract-document {
+        margin-top: 20px;
+
+        gap: 9px;
+    }
+
+
+    .contract-row {
+        grid-template-columns:
+            32px
+            minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding:
+            15px;
+    }
+
+
+    .contract-number {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .contract-row h3 {
+        font-size: .70rem;
+
+        margin-top: 0;
+    }
+
+
+    .contract-row p {
+        font-size: .58rem;
+
+        line-height: 1.7;
+    }
+
+
+    .commission-box {
+        gap: 20px;
+
+        padding:
+            14px;
+    }
+
+
+    .commission-box strong {
+        font-size: 1.08rem;
+    }
+
+
+    .commission-box span {
+        font-size: .52rem;
+    }
+
+
+    .commission-divider {
+        height: 30px;
+    }
+
+
+    .seller-contract-accept {
+        margin-top: 20px;
+
+        padding:
+            13px;
+
+        font-size: .57rem;
+    }
+
+
+    .seller-contract-button {
+        min-height: 46px;
+
+        font-size: .65rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .seller-contract-header-container {
+        width: calc(100% - 22px);
+    }
+
+
+    .seller-contract-brand strong {
+        font-size: 1.22rem;
+    }
+
+
+    .seller-contract-brand span {
+        font-size: .71rem;
+    }
+
+
+    .seller-contract-back span {
+        display: none;
+    }
+
+
+    .seller-contract-back i {
+        font-size: .72rem;
+    }
+
+
+    .seller-contract-page {
+        padding:
+            84px
+            10px
+            30px;
+    }
+
+
+    .seller-contract-card {
+        padding:
+            26px
+            15px
+            22px;
+
+        border-radius: 15px;
+    }
+
+
+    .seller-contract-heading h1 {
+        font-size: 1.22rem;
+    }
+
+
+    .seller-contract-heading p {
+        font-size: .59rem;
+    }
+
+
+    .contract-introduction {
+        padding:
+            13px;
+    }
+
+
+    .contract-introduction p {
+        font-size: .57rem;
+    }
+
+
+    .contract-row {
+        grid-template-columns:
+            29px
+            minmax(0, 1fr);
+
+        gap: 9px;
+
+        padding:
+            13px;
+    }
+
+
+    .contract-number {
+        width: 28px;
+        height: 28px;
+
+        font-size: .55rem;
+    }
+
+
+    .contract-row h3 {
+        font-size: .67rem;
+    }
+
+
+    .contract-row p {
+        font-size: .56rem;
+
+        line-height: 1.68;
+    }
+
+
+    .commission-box {
+        gap: 15px;
+
+        padding:
+            12px;
+    }
+
+
+    .commission-box strong {
+        font-size: 1rem;
+    }
+
+
+    .commission-box span {
+        font-size: .49rem;
+    }
+
+
+    .seller-contract-accept {
+        font-size: .55rem;
+
+        gap: 8px;
+    }
+
+
+    .seller-contract-check {
+        width: 16px;
+        height: 16px;
+
+        flex-basis: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .seller-contract-page {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+
+    .seller-contract-card {
+        padding:
+            23px
+            12px
+            20px;
+    }
+
+
+    .seller-contract-heading h1 {
+        font-size: 1.15rem;
+    }
+
+
+    .contract-row {
+        grid-template-columns:
+            27px
+            minmax(0, 1fr);
+
+        gap: 8px;
+
+        padding:
+            12px;
+    }
+
+
+    .contract-number {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .contract-row h3 {
+        font-size: .64rem;
+    }
+
+
+    .contract-row p {
+        font-size: .54rem;
+    }
+
+
+    .commission-box {
+        gap: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
