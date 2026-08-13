@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html lang="pt-PT">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta
+name="description"
+content="Carrinho de compras — Adonai Vangadio Market">
+
+<title>
+Carrinho | AV Market
+</title>
+
+
+<!-- GOOGLE FONTS -->
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- CSS PRINCIPAL -->
+
+<link
+rel="stylesheet"
+href="../css/style.css">
+
+
+<!-- CSS DO CARRINHO -->
+
+<link
+rel="stylesheet"
+href="../css/carrinho.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     CABEÇALHO FIXO
+====================================================== -->
+
+<header class="cart-header">
+
+<div class="cart-header-container">
+
+
+<a
+href="../index.html"
+class="cart-logo">
+
+<span class="cart-logo-av">
+AV
+</span>
+
+<span class="cart-logo-market">
+Market
+</span>
+
+</a>
+
+
+<div class="cart-header-title">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span>
+Carrinho
+</span>
+
+</div>
+
+
+<a
+href="../index.html"
+class="cart-back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+<span>
+Continuar a comprar
+</span>
+
+</a>
+
+
+</div>
+
+</header>
+
+
+
+<!-- ======================================================
+     CONTEÚDO
+====================================================== -->
+
+<main class="cart-page">
+
+
+<div class="cart-container">
+
+
+<!-- CABEÇALHO -->
+
+<div class="cart-page-heading">
+
+<div>
+
+<span class="cart-tag">
+AV MARKET
+</span>
+
+<h1>
+O seu carrinho
+</h1>
+
+<p>
+Revise os seus produtos antes de finalizar a compra.
+</p>
+
+</div>
+
+
+<div class="cart-security">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<div>
+
+<strong>
+Compra segura
+</strong>
+
+<span>
+Os seus dados estão protegidos.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- GRID -->
+
+<div class="cart-layout">
+
+
+<!-- PRODUTOS -->
+
+<section class="cart-products-section">
+
+
+<div class="cart-section-heading">
+
+<div>
+
+<h2>
+Produtos selecionados
+</h2>
+
+<span id="cartItemCount">
+0 produtos
+</span>
+
+</div>
+
+
+<button
+type="button"
+id="clearCartButton"
+class="clear-cart">
+
+<i class="fa-solid fa-trash"></i>
+
+Limpar carrinho
+
+</button>
+
+</div>
+
+
+<div
+id="cartItems"
+class="cart-items">
+</div>
+
+
+<!-- CARRINHO VAZIO -->
+
+<div
+id="emptyCart"
+class="empty-cart"
+hidden>
+
+<div class="empty-cart-icon">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+<h3>
+O seu carrinho está vazio
+</h3>
+
+<p>
+Adicione produtos ao carrinho para continuar.
+</p>
+
+<a
+href="../index.html"
+class="btn-primary">
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+Explorar produtos
+
+</a>
+
+</div>
+
+
+</section>
+
+
+
+<!-- RESUMO -->
+
+<aside class="cart-summary">
+
+
+<div class="summary-header">
+
+<span>
+RESUMO DA COMPRA
+</span>
+
+<h2>
+Total do pedido
+</h2>
+
+</div>
+
+
+
+<div class="summary-row">
+
+<span>
+Subtotal
+</span>
+
+<strong id="cartSubtotal">
+0 Kz
+</strong>
+
+</div>
+
+
+
+<!-- ENTREGA -->
+
+<div class="delivery-box">
+
+
+<div class="delivery-title">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<div>
+
+<strong>
+Entrega ao domicílio
+</strong>
+
+<span>
+Calculada conforme a localização
+</span>
+
+</div>
+
+</div>
+
+
+
+<label for="deliveryLocation">
+
+Localidade de entrega
+
+</label>
+
+
+<select
+id="deliveryLocation">
+
+<option value="">
+Selecione a sua localização
+</option>
+
+
+<!-- MAIS PRÓXIMAS -->
+
+<option value="morro-bento">
+Morro Bento
+</option>
+
+<option value="capolo-2">
+Capolo 2
+</option>
+
+<option value="talatona">
+Talatona
+</option>
+
+<option value="benfica">
+Benfica
+</option>
+
+<option value="nova-vida">
+Nova Vida
+</option>
+
+<option value="kilamba">
+Kilamba
+</option>
+
+
+<!-- ZONA CENTRAL -->
+
+<option value="maianga">
+Maianga
+</option>
+
+<option value="alvalade">
+Alvalade
+</option>
+
+<option value="maculusso">
+Maculusso
+</option>
+
+<option value="bairro-operario">
+Bairro Operário
+</option>
+
+<option value="marcal">
+Marçal
+</option>
+
+<option value="sambizanga">
+Sambizanga
+</option>
+
+<option value="ngola-kiluanje">
+Ngola Kiluanje
+</option>
+
+<option value="palanca">
+Palanca
+</option>
+
+<option value="grafanil">
+Grafanil
+</option>
+
+
+<!-- CENTRO / LUANDA -->
+
+<option value="ingombota">
+Ingombota
+</option>
+
+<option value="mutamba">
+Mutamba
+</option>
+
+<option value="baixa-de-luanda">
+Baixa de Luanda
+</option>
+
+<option value="ilha-de-luanda">
+Ilha de Luanda
+</option>
+
+<option value="morro-da-luz">
+Morro da Luz
+</option>
+
+<option value="kinaxixi">
+Kinaxixi
+</option>
+
+
+<!-- ZONA SUL -->
+
+<option value="camama">
+Camama
+</option>
+
+<option value="futungo">
+Futungo
+</option>
+
+<option value="benfica-sul">
+Benfica Sul
+</option>
+
+<option value="patriota">
+Patriota
+</option>
+
+<option value="lar-do-patriota">
+Lar do Patriota
+</option>
+
+<option value="via-expressa">
+Via Expressa
+</option>
+
+
+<!-- VIANA -->
+
+<option value="viana">
+Viana
+</option>
+
+<option value="estacio">
+Estalagem
+</option>
+
+<option value="kikuxi">
+Kikuxi
+</option>
+
+<option value="zango-0">
+Zango 0
+</option>
+
+<option value="zango-1">
+Zango 1
+</option>
+
+<option value="zango-2">
+Zango 2
+</option>
+
+<option value="zango-3">
+Zango 3
+</option>
+
+<option value="zango-4">
+Zango 4
+</option>
+
+<option value="zango-5">
+Zango 5
+</option>
+
+
+<!-- MAIS DISTANTES -->
+
+<option value="sequele">
+Sequele
+</option>
+
+<option value="cacuaco">
+Cacuaco
+</option>
+
+<option value="mulenvos">
+Mulenvos
+</option>
+
+<option value="funda">
+Funda
+</option>
+
+<option value="catete">
+Catete
+</option>
+
+<option value="calumbo">
+Calumbo
+</option>
+
+<option value="musseque">
+Outra localidade</option>
+
+</select>
+
+
+
+<div
+id="deliveryMessage"
+class="delivery-message">
+
+<i class="fa-solid fa-location-dot"></i>
+
+Selecione a localidade para calcular a entrega.
+
+</div>
+
+
+</div>
+
+
+
+<!-- TAXA -->
+
+<div class="summary-row delivery-row">
+
+<span>
+Entrega
+</span>
+
+<strong id="deliveryFee">
+0 Kz
+</strong>
+
+</div>
+
+
+
+<div class="summary-divider">
+</div>
+
+
+
+<!-- TOTAL -->
+
+<div class="summary-total">
+
+<span>
+Total
+</span>
+
+<strong id="cartTotal">
+0 Kz
+</strong>
+
+</div>
+
+
+
+<!-- PAGAMENTOS -->
+
+<div class="payment-methods">
+
+<span class="payment-label">
+MÉTODOS DE PAGAMENTO
+</span>
+
+
+<div class="payment-icons">
+
+
+<div
+class="payment-icon"
+title="Multicaixa Express">
+
+<div class="payment-symbol multicaixa">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+</div>
+
+<span>
+Multicaixa Express
+</span>
+
+</div>
+
+
+
+<div
+class="payment-icon"
+title="Transferência bancária">
+
+<div class="payment-symbol bank">
+
+<i class="fa-solid fa-building-columns"></i>
+
+</div>
+
+<span>
+Banco / IBAN
+</span>
+
+</div>
+
+
+
+<div
+class="payment-icon"
+title="PayPay">
+
+<div class="payment-symbol paypay">
+
+<i class="fa-solid fa-wallet"></i>
+
+</div>
+
+<span>
+PayPay
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- CHECKOUT -->
+
+<a
+href="checkout.html"
+id="checkoutButton"
+class="checkout-button">
+
+<span>
+Finalizar compra
+</span>
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+
+<p class="checkout-note">
+
+<i class="fa-solid fa-lock"></i>
+
+Pagamento seguro no checkout.
+
+</p>
+
+
+</aside>
+
+</div>
+
+
+
+<!-- ======================================================
+     NAVEGAÇÃO FIXA
+====================================================== -->
+
+<!-- ======================================================
+     NAVEGAÇÃO FIXA — CARRINHO
+     RODAPÉ INTELIGENTE
+====================================================== -->
+<nav
+    class="cart-mobile-navigation"
+    id="mainMobileNavigation"
+    aria-label="Navegação principal">
+    <!-- INÍCIO -->
+    <a
+        href="../index.html"
+        id="mobileHomeLink">
+        <i class="fa-solid fa-house"></i>
+        <span>
+            Início
+        </span>
+    </a>
+    <!-- CARRINHO -->
+    <a
+        href="carrinho.html"
+        class="active"
+        id="mobileCartLink">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>
+            Carrinho
+        </span>
+    </a>
+    <!-- FAVORITOS -->
+    <a
+        href="favoritos.html"
+        id="mobileWishlistLink">
+        <i class="fa-solid fa-heart"></i>
+        <span>
+            Favoritos
+        </span>
+    </a>
+    <!-- PEDIDOS -->
+    <a
+        href="pedidos.html"
+        id="mobileOrdersLink">
+        <i class="fa-solid fa-box"></i>
+        <span>
+            Pedidos
+        </span>
+    </a>
+    <!-- MINHA CONTA — INTELIGENTE -->
+    <a
+        href="login.html"
+        id="mobileAccountLink"
+        data-account-link="true"
+        aria-label="Minha Conta">
+        <i class="fa-solid fa-user"></i>
+        <span>
+            Conta
+        </span>
+    </a>
+</nav>
+<!-- ======================================================
+     CONFIANÇA
+====================================================== -->
+<div class="cart-trust">
+    <div>
+        <i class="fa-solid fa-shield-halved"></i>
+        <strong>
+            Compra segura
+        </strong>
+        <span>
+            Proteção dos seus dados
+        </span>
+    </div>
+    <div>
+        <i class="fa-solid fa-truck-fast"></i>
+        <strong>
+            Entrega ao domicílio
+        </strong>
+        <span>
+            Calculada pela localização
+        </span>
+    </div>
+    <div>
+        <i class="fa-solid fa-headset"></i>
+        <strong>
+            Suporte AV Market
+        </strong>
+        <span>
+            Estamos aqui para ajudar
+        </span>
+    </div>
+    <div>
+        <i class="fa-solid fa-credit-card"></i>
+        <strong>
+            Pagamento flexível
+        </strong>
+        <span>
+            Várias opções disponíveis
+        </span>
+    </div>
+</div>
+</div>
+</main>
+<!-- ======================================================
+     JAVASCRIPT EXISTENTE — NÃO ALTERADO
+====================================================== -->
+<script src="../js/cart.js"></script>
+<script src="../js/carrinho.js"></script>
+<script src="../js/footer-auth.js"></script>
+
+<!-- ======================================================
+     FOOTER INTELIGENTE — AUTENTICAÇÃO
+====================================================== -->
+<script
+    type="module"
+    src="../js/footer-auth.js">
+</script>
+</body>
+</html>
