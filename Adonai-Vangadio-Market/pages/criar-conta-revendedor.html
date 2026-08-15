@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AV MARKET — Criar conta</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style-2.css"
+    >
+
+</head>
+
+
+<body
+    class="auth-page"
+    data-screen="seller"
+>
+
+
+    <main class="auth-wrapper">
+
+
+        <div
+            class="auth-container auth-reversed"
+            id="authContainer"
+        >
+
+
+            <section class="auth-panel auth-panel-dark">
+
+                <div class="auth-content dark-content">
+
+                    <span class="brand-dark">
+                        AV MARKET
+                    </span>
+
+                    <h2>
+                        Revendedor.
+                    </h2>
+
+                    <p class="dark-subtitle">
+                        A tua conta está quase pronta.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="outline-button"
+                        data-navigate="login.html"
+                    >
+                        Entrar
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="auth-panel auth-panel-light">
+
+                <div class="auth-content">
+
+                    <span class="brand-light">
+                        AV MARKET
+                    </span>
+
+                    <h1>
+                        Criar conta
+                    </h1>
+
+                    <p class="auth-subtitle">
+                        Conta de revendedor.
+                    </p>
+
+
+                    <form
+                        id="sellerRegisterForm"
+                    >
+
+
+                        <label for="sellerName">
+                            Nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sellerName"
+                            name="name"
+                            placeholder="Seu nome"
+                            autocomplete="name"
+                            required
+                        >
+
+
+                        <label for="sellerEmail">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="sellerEmail"
+                            name="email"
+                            placeholder="Seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+
+
+                        <label for="sellerPassword">
+                            Palavra-passe
+                        </label>
+
+
+                        <div class="password-field">
+
+                            <input
+                                type="password"
+                                id="sellerPassword"
+                                name="password"
+                                placeholder="Sua palavra-passe"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-toggle="sellerPassword"
+                                aria-label="Mostrar palavra-passe"
+                            >
+                                ●
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                            id="sellerCreateButton"
+                        >
+                            Criar conta
+                        </button>
+
+
+                        <p
+                            class="form-message"
+                            id="sellerRegisterMessage"
+                        ></p>
+
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <div
+        class="page-transition"
+        id="pageTransition"
+    ></div>
+
+
+    <script src="../js/script-2.js"></script>
+
+    <script
+        type="module"
+        src="../js/script-3.js"
+    ></script>
+
+</body>
+
+</html>
